@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Control panel</h2>
+<p>Here is the list of the plant's commands' access.</p>
+<p>Note that the same plant may be accessed through several ways.
+For example if you view this page on controller.enerwhere.com, use the access: YOUR_PLANT by pi#@localhost.
+</p>
+<p>Also note that loading one of these links will start a process with your requested command. Try not to interrupt the process or unnecessarily reload the "Done" page.
+</p>
+    <ul>
+    {% for link in links %}
+    	<li>{{link.plant.label}} by {{link.user}}@{{link.host}}. {{link.comment}}</li>
+    		<ul>
+        		<li><a href="{% url 'start' link.pk %}">Start</a>
+        		 | <a href="{% url 'restart' link.pk %}">Restart</a>
+        		  | <a href="{% url 'stop' link.pk %}">Stop</a>
+        		   | <a href="{% url 'status' link.pk %}">Status</a></li>
+        		<li><a href="{% url 'sync' link.pk %}">Synchronize configuration</a></li>
+        	</ul>
+    {% empty %}
+    	<p>No links plant to controller in DB.</p>
+    {% endfor %}
+    </ul>
+
+<h4>Legend</h4>
+<p>Start: start the controller, if the controller already runs nothing happens.</p>
+<p>Restart: restart the controller, a stop then start. Useful after updating to a new configuration.</p>
+<p>Stop: stop the controller. Note that the controller auto-starts every hour during day time.</p>
+<p>Status: status of the controller. Returns if the controller is running, this command never does any harm so use it as much as needed.</p>
+<p>Synchronize: copy the configuration from DB Admin to the controller.</p>
+ 
+ {% endblock %}

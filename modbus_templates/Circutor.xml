@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ControllerTemplate encoding="UTF-8" name="Circutor" uid="86561" version="1.0">
+   <Group id="82998" name="Measurements" uid="1021519">
+      <Point id="1021518" name="Active Power L2" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="Hi U8" index="15" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="975036" name="Current L1" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="Hi S8" index="3" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="975037" name="Current L2" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="Hi S8" index="13" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="975038" name="Current L3" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="Hi S8" index="17" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="975043" name="Power Factor" unit="PF">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="39" type="Holding"/>
+         <Calculate decimals="2"/>
+         <Enum/>
+      </Point>
+      <Point id="975042" name="Total Active Power" unit="W">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="31" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="975039" name="Voltage phase L1" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="0" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="975040" name="Voltage phase L2" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="11" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="975041" name="Voltage phase L3" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="15" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="86560" name="Test" uid="1022614">
+      <Point id="1022612" name="Current L1" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="3" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1022609" name="Line Voltage L1-2" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="43" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1022610" name="Line Voltage L2-3" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="45" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1022611" name="Line Voltage L3-1" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="47" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1022608" name="Total system energy" unit="kWh">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="61" type="Holding"/>
+         <Calculate scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1022613" name="Voltage L1" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="0" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+</ControllerTemplate>

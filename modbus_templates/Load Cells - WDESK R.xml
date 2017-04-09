@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ControllerTemplate encoding="UTF-8" name="Load Cells - WDESK R" uid="90447" version="1.0">
+   <Group id="90446" name="00 - Totals" uid="1082175">
+      <Point id="1073424" name="Coefficient %28High%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="15" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073425" name="Coefficient %28Low%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="16" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073423" name="Divisions %26 Units of measures">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="14" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1082174" name="Fuel Volume" unit="L">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="11" type="Holding"/>
+         <Calculate scaling="0.832"/>
+         <Enum/>
+      </Point>
+      <Point id="1073417" name="Gross Weight %28High%29" unit="kg">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="8" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073418" name="Gross Weight %28Low%29" unit="kg">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="9" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073419" name="Net Weight %28High%29" unit="kg">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="10" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073420" name="Net Weight %28Low%29" unit="kg">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="11" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073428" name="Number of Pieces %28High%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="63" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073429" name="Number of Pieces %28Low%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="64" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073421" name="Peak Weight %28High%29" unit="kg">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="12" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073422" name="Peak Weight %28Low%29" unit="kg">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="13" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073426" name="Totalised Weight %28High%29" unit="kg">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="61" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073427" name="Totalised Weight %28Low%29" unit="kg">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="62" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="90441" name="Alarms %26 Alerts" uid="1073358">
+      <Point id="1073346" name="AD Convertor Malfunction">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="7" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum/>
+      </Point>
+      <Point id="1073345" name="Cell Error">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="7" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum/>
+      </Point>
+      <Point id="1073349" name="Gross Weight beyond Limits">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="7" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum/>
+      </Point>
+      <Point id="1073348" name="Gross Weight higher than 110%25 of full scale">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="7" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum/>
+      </Point>
+      <Point id="1073351" name="Gross Weight negative">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="7" type="Holding"/>
+         <Calculate mask="128"/>
+         <Enum/>
+      </Point>
+      <Point id="1073347" name="Maximum Weight Exceeded 9 division">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="7" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum/>
+      </Point>
+      <Point id="1073354" name="Net display mode">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="7" type="Holding"/>
+         <Calculate mask="1024"/>
+         <Enum/>
+      </Point>
+      <Point id="1073350" name="Net Weight beyond Limits">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="7" type="Holding"/>
+         <Calculate mask="32"/>
+         <Enum/>
+      </Point>
+      <Point id="1073352" name="Net Weight negative">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="7" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum/>
+      </Point>
+      <Point id="1073353" name="Peak Weight negative">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="7" type="Holding"/>
+         <Calculate mask="512"/>
+         <Enum/>
+      </Point>
+      <Point id="1073357" name="Research in progress">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="0" type="Holding"/>
+         <Calculate mask="8192"/>
+         <Enum/>
+      </Point>
+      <Point id="1073355" name="Weight stability">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="7" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum/>
+      </Point>
+      <Point id="1073356" name="Weight within 1%2F4th of 0">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="0" type="Holding"/>
+         <Calculate mask="4096"/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="90442" name="Commands %26 Status" uid="1073389">
+      <Point id="1073388" name="00 - Command Register">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="6" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DNo Command%3B7%3DNet Weight Displaying%3B8%3DSemiauto Zero%3B9%3DGross Weight Displaying%3B21%3DKeypad Lock%3B22%3DKeypad %26 Display unlock%3B23%3DKeypad %26 Display lock%3B99%3DSaving data in EEPROM%3B100%3DZero-set for calibration%3B101%3DSample weight storage for calibration%3B132%3DRead PTare1%3B133%3DWrite PTare1%3B134%3DRead PTare2%3B135%3DWrite PTare2%3B136%3DRead PTare3%3B137%3DWrite PTare3%3B138%3DRead PTare4%3B139%3DWrite PTare4%3B140%3DRead PTare5%3B141%3DWrite PTare5%3B142%3DRead PTare6%3B143%3DWrite PTare6%3B144%3DRead PTare7%3B145%3DWrite PTare7%3B146%3DRead PTare8%3B147%3DWrite PTare8%3B148%3DRead PTare9%3B149%3DWrite PTare9%3B201%3DBatching%3A Start%3B202%3DBatching%3A Pause%3B203%3DBatching%3A Resume%3B204%3DBatching%3A Stop%3B205%3DBatching%3A Accept Alarms %26 Stop%3B206%3DBatching%3A Ignore Tare Alarm%3B207%3DBatching%3A Ignore tOL Alarm%3B208%3DInterrupt Automatic Loading%3B209%3DBatching%3A Continue After CONAnd%3B250%3DConfirmation of Batch data reading</Enum>
+      </Point>
+      <Point id="1073358" name="Input 1 Status">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="17" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum/>
+      </Point>
+      <Point id="1073359" name="Input 2 Status">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="17" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum/>
+      </Point>
+      <Point id="1073360" name="Input 3 Status">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="17" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum/>
+      </Point>
+      <Point id="1073369" name="Instrument Status">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DSleep Mode%3B1%3DFormula Displaying%3B2%3DBatching Constants displaying%3B3%3DConsumption displaying%3B4%3DSystem parameters displaying%3B5%3DSetting numbers %26 Formulas%3B6%3DInstrument in batching mode%3B7%3DEmpty Alarm%3B8%3DAlarm -------%3B9%3DAlarm ConS%3F%3B10%3DAlarm Tare%3F%3B11%3DAlarm Load%2FUnload%3B12%3DLoad%2FUnload Set to Cycle%3B13%3DBatching paused%3B14%3DCycle End%3B15%3DAlarm Unload%3B16%3DAlarm Blach%3B18%3DAlarm Fall%3B24%3DAlarm Prod%3F%3F%3B25%3DAlarm tOL%3B26%3DInstrument waits for printing%3B27%3DDis Menu parameters  %28Batching%29%3B28%3DDisplaying the Setpoint class%3B29%3DAutomatic Loading%3B30%3DAlarm USB Er%3B31%3DAlarm StOCH%3B32%3DAlarm ErUEIG%3B33%3DAlarm StOCHn%3B34%3DAlarm NENFUL%3B35%3DAlarm NENOUr%3B36%3DPartial Unloading%3B37%3DAwaiting confirm - partial unload%3B38%3DStart of auto batch%3B39%3DStart of manual batch%3B40%3DAlarm SLAUE %28Batching%29%3B41%3DCycle End - Partial unload</Enum>
+      </Point>
+      <Point id="1073361" name="Output 1 Status">
+         <Type>SetValue</Type>
+         <Address format="U16" index="18" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum/>
+      </Point>
+      <Point id="1073362" name="Output 2 Status">
+         <Type>SetValue</Type>
+         <Address format="U16" index="18" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum/>
+      </Point>
+      <Point id="1073363" name="Output 3 Status">
+         <Type>SetValue</Type>
+         <Address format="U16" index="18" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum/>
+      </Point>
+      <Point id="1073364" name="Output 4 Status">
+         <Type>SetValue</Type>
+         <Address format="U16" index="18" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum/>
+      </Point>
+      <Point id="1073365" name="Output 5 Status">
+         <Type>SetValue</Type>
+         <Address format="U16" index="18" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum/>
+      </Point>
+      <Point id="1073370" name="Sample Weight for Calibration %28High%29" unit="kg">
+         <Type>SetValue</Type>
+         <Address format="U16" index="65" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073371" name="Sample Weight for Calibration %28Low%29" unit="kg">
+         <Type>SetValue</Type>
+         <Address format="U16" index="66" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073374" name="Weight Corresponding to Full %28High%29" unit="kg">
+         <Type>SetValue</Type>
+         <Address format="U16" index="69" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073375" name="Weight Corresponding to Full %28Low%29" unit="kg">
+         <Type>SetValue</Type>
+         <Address format="U16" index="70" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073376" name="Weight Corresponding to Full %28Low%29">
+         <Type>SetValue</Type>
+         <Address format="U16" index="70" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073372" name="Weight Corresponding to Zero %28High%29" unit="kg">
+         <Type>SetValue</Type>
+         <Address format="U16" index="67" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073373" name="Weight Corresponding to Zero %28Low%29" unit="kg">
+         <Type>SetValue</Type>
+         <Address format="U16" index="68" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="90443" name="Registers" uid="1073388">
+      <Point id="1073377" name="Register 01 ">
+         <Type>SetValue</Type>
+         <Address format="U16" index="51" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073378" name="Register 02">
+         <Type>SetValue</Type>
+         <Address format="U16" index="52" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073379" name="Register 03">
+         <Type>SetValue</Type>
+         <Address format="U16" index="53" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073380" name="Register 04">
+         <Type>SetValue</Type>
+         <Address format="U16" index="54" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073382" name="Register 05">
+         <Type>SetValue</Type>
+         <Address format="U16" index="55" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073381" name="Register 05">
+         <Type>SetValue</Type>
+         <Address format="U16" index="55" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073383" name="Register 06">
+         <Type>SetValue</Type>
+         <Address format="U16" index="56" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073384" name="Register 07">
+         <Type>SetValue</Type>
+         <Address format="U16" index="57" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073385" name="Register 08">
+         <Type>SetValue</Type>
+         <Address format="U16" index="58" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073386" name="Register 09">
+         <Type>SetValue</Type>
+         <Address format="U16" index="59" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073387" name="Register 10">
+         <Type>SetValue</Type>
+         <Address format="U16" index="60" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="90444" name="Setpoints %26 Hysteresis" uid="1073412">
+      <Point id="1073401" name="Hysteresis 1 %28High%29">
+         <Type>SetValue</Type>
+         <Address format="U16" index="39" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073402" name="Hysteresis 1 %28Low%29">
+         <Type>SetValue</Type>
+         <Address format="U16" index="40" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073403" name="Hysteresis 2 %28High%29">
+         <Type>SetValue</Type>
+         <Address format="U16" index="41" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073404" name="Hysteresis 2 %28Low%29">
+         <Type>SetValue</Type>
+         <Address format="U16" index="42" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073405" name="Hysteresis 3 %28High%29">
+         <Type>SetValue</Type>
+         <Address format="U16" index="43" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073406" name="Hysteresis 3 %28Low%29">
+         <Type>SetValue</Type>
+         <Address format="U16" index="44" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073407" name="Hysteresis 4 %28High%29">
+         <Type>SetValue</Type>
+         <Address format="U16" index="45" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073408" name="Hysteresis 4 %28Low%29">
+         <Type>SetValue</Type>
+         <Address format="U16" index="46" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073409" name="Hysteresis 5 %28High%29">
+         <Type>SetValue</Type>
+         <Address format="U16" index="47" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073411" name="Hysteresis 5 %28Low%29">
+         <Type>SetValue</Type>
+         <Address format="U16" index="48" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073410" name="Hysteresis 5 %28Low%29">
+         <Type>SetValue</Type>
+         <Address format="U16" index="48" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073389" name="Setpoint 1 %28High%29">
+         <Type>SetValue</Type>
+         <Address format="U16" index="19" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073390" name="Setpoint 1 %28Low%29">
+         <Type>SetValue</Type>
+         <Address format="U16" index="20" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073391" name="Setpoint 2 %28High%29">
+         <Type>SetValue</Type>
+         <Address format="U16" index="21" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073392" name="Setpoint 2 %28Low%29">
+         <Type>SetValue</Type>
+         <Address format="U16" index="22" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073393" name="Setpoint 3 %28High%29">
+         <Type>SetValue</Type>
+         <Address format="U16" index="23" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073394" name="Setpoint 3 %28Low%29">
+         <Type>SetValue</Type>
+         <Address format="U16" index="24" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073395" name="Setpoint 4 %28High%29">
+         <Type>SetValue</Type>
+         <Address format="U16" index="25" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073396" name="Setpoint 4 %28Low%29">
+         <Type>SetValue</Type>
+         <Address format="U16" index="26" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073397" name="Setpoint 5 %28High%29">
+         <Type>SetValue</Type>
+         <Address format="U16" index="27" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073398" name="Setpoint 5 %28Low%29">
+         <Type>SetValue</Type>
+         <Address format="U16" index="28" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073399" name="SetPoint Class %281%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="37" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073400" name="SetPoint Class %282%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="38" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="90445" name="System Info" uid="1073417">
+      <Point id="1073412" name="Firmware Version">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073413" name="Instrument Type">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="2" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073416" name="Program Type">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="5" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073415" name="Serial Number">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="4" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073414" name="Year of Manufacture">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="3" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+</ControllerTemplate>

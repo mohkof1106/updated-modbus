@@ -1,0 +1,517 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ControllerTemplate encoding="UTF-8" name="MIC-2" uid="87602" version="1.0">
+   <Group id="84915" name="CTs %26 Configuration" uid="1003656">
+      <Point id="1001440" name="CT1" unit="A">
+         <Type>SetValue</Type>
+         <Address format="U16" index="4104" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1001441" name="CT2" unit="A">
+         <Type>SetValue</Type>
+         <Address format="U16" index="4105" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1003653" name="PT 1%28High 16 bit%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="4101" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1003654" name="PT 1%28Low 16 bit%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="4102" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1003655" name="PT2">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="4103" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1003652" name="U16">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="265" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="83240" name="I%2FO" uid="978830">
+      <Point id="978827" name="IO11 DI1" unit="">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="1" type="Discrete"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="978828" name="IO11 Relay 1" unit="">
+         <Type>SetValue</Type>
+         <Address format="Bool" index="1" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="978829" name="IO11 Relay 2" unit="">
+         <Type>SetValue</Type>
+         <Address format="Bool" index="2" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="87600" name="Maxima" uid="1036033">
+      <Point id="1035997" name="MAX of apparent power demand">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16807" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036032" name="MAX of current unbalance factor">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16821" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036006" name="MAX of frequency ">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16786" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036010" name="MAX of I1">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16737" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036003" name="MAX of I1 THD">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16849" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036011" name="MAX of I2">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16744" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036004" name="MAX of I2 THD">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16856" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036012" name="MAX of I3">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16751" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036005" name="MAX of I3 THD">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16863" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1035995" name="MAX of power demand">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16793" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036016" name="MAX of power factor ">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16779" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1035996" name="MAX of reactive power demand">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16800" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036015" name="MAX of system apparent power">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16772" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036013" name="MAX of system power">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16758" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036014" name="MAX of system reactive power">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16765" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1035992" name="MAX of V1">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16695" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036000" name="MAX of V1 %28V12%29 THD">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16821" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036007" name="MAX of V12">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16716" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1035993" name="MAX of V2">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16702" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036027" name="MAX of V23">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16723" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1035994" name="MAX of V3">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16709" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036002" name="MAX of V3 %28V23%29 THD">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16842" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036009" name="MAX of V31">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16730" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1035998" name="MAX of voltage unbalance factor">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16814" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="83241" name="Measurements" uid="1004734">
+      <Point id="978830" name="01 Voltage L1N" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16386" type="Holding"/>
+         <Calculate decimals="2"/>
+         <Enum/>
+      </Point>
+      <Point id="978831" name="02 Voltage L2N" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16388" type="Holding"/>
+         <Calculate decimals="2"/>
+         <Enum/>
+      </Point>
+      <Point id="978832" name="03 Voltage L3N" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16390" type="Holding"/>
+         <Calculate decimals="2"/>
+         <Enum/>
+      </Point>
+      <Point id="978833" name="04 Voltage Lavg" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16392" type="Holding"/>
+         <Calculate decimals="2"/>
+         <Enum/>
+      </Point>
+      <Point id="978834" name="05 Voltage L1L2" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16394" type="Holding"/>
+         <Calculate decimals="2"/>
+         <Enum/>
+      </Point>
+      <Point id="978835" name="06 Voltage L2L3" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16396" type="Holding"/>
+         <Calculate decimals="2"/>
+         <Enum/>
+      </Point>
+      <Point id="978836" name="07 Voltage L3L1" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16398" type="Holding"/>
+         <Calculate decimals="2"/>
+         <Enum/>
+      </Point>
+      <Point id="978837" name="08 Voltage LLavg" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16400" type="Holding"/>
+         <Calculate decimals="2"/>
+         <Enum/>
+      </Point>
+      <Point id="978838" name="09 Current L1" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16402" type="Holding"/>
+         <Calculate decimals="2" scaling="0.005"/>
+         <Enum/>
+      </Point>
+      <Point id="978839" name="10 Current L2" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16404" type="Holding"/>
+         <Calculate decimals="2" scaling="0.005"/>
+         <Enum/>
+      </Point>
+      <Point id="978840" name="11 Current L3" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16406" type="Holding"/>
+         <Calculate decimals="2" scaling="0.005"/>
+         <Enum/>
+      </Point>
+      <Point id="978841" name="12 Current Lavg" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16408" type="Holding"/>
+         <Calculate decimals="2" scaling="0.005"/>
+         <Enum/>
+      </Point>
+      <Point id="978842" name="13 Current N" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16410" type="Holding"/>
+         <Calculate decimals="2" scaling="0.005"/>
+         <Enum/>
+      </Point>
+      <Point id="978843" name="14 Power L1" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16412" type="Holding"/>
+         <Calculate decimals="2" scaling="5.0"/>
+         <Enum/>
+      </Point>
+      <Point id="978844" name="15 Power L2" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16414" type="Holding"/>
+         <Calculate decimals="2" scaling="5.0"/>
+         <Enum/>
+      </Point>
+      <Point id="978845" name="16 Power L3" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16416" type="Holding"/>
+         <Calculate decimals="2" scaling="5.0"/>
+         <Enum/>
+      </Point>
+      <Point id="978846" name="17 Power Factor" unit="PF">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16442" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="978847" name="20 Avg current" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16408" type="Holding"/>
+         <Calculate decimals="2" scaling="0.005"/>
+         <Enum/>
+      </Point>
+      <Point id="1003674" name="Apparent Power Demand-dontuse" unit="kVA">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16454" type="Holding"/>
+         <Calculate scaling="5.0"/>
+         <Enum/>
+      </Point>
+      <Point id="978848" name="Energy Exported" unit="kWh">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="16459" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="978849" name="Energy Imported" unit="kWh">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="16457" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="978850" name="Frequency MIC-2" unit="Hz">
+         <Type>ShowValue</Type>
+         <Address format="Float" index="16385" type="Holding"/>
+         <Calculate decimals="2"/>
+         <Enum/>
+      </Point>
+      <Point id="1003673" name="Power Demand" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16450" type="Holding"/>
+         <Calculate scaling="5.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1003675" name="System Apparent Power" unit="kVA">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16434" type="Holding"/>
+         <Calculate scaling="5.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1003685" name="System Power" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16418" type="Holding"/>
+         <Calculate scaling="5.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1004733" name="Total Energy" unit="kWh">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="16465" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="87601" name="Minima" uid="1036041">
+      <Point id="1036031" name="MIN of apparent power demand">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16982" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1035999" name="MIN of current unbalance factor">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16996" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036033" name="MIN of frequency ">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16996" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036017" name="MIN of I1">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16912" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036018" name="MIN of I1 THD">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="17024" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036019" name="MIN of I2">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16919" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036020" name="MIN of I2 THD">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="17031" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036021" name="MIN of I3">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16926" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036022" name="MIN of I3 THD">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="17038" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036034" name="MIN of power demand">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16968" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036035" name="MIN of power factor ">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16954" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036036" name="MIN of reactive power demand">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16975" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036037" name="MIN of system apparent power">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16947" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036038" name="MIN of system power">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16933" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036039" name="MIN of system reactive power">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16940" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036023" name="MIN of V1">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16870" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036024" name="MIN of V1 %28V12%29 THD">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16996" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036025" name="MIN of V12">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16891" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036026" name="MIN of V2">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16877" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036001" name="MIN of V2 %28V31%29 THD">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="17010" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036008" name="MIN of V23">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16898" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036028" name="MIN of V3">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16884" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036029" name="MIN of V3 %28V23%29 THD">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="17017" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036030" name="MIN of V31">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16905" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1036040" name="MIN of voltage unbalance factor">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16989" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+</ControllerTemplate>

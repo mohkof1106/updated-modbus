@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ControllerTemplate encoding="UTF-8" name="Circutor v2" uid="87600" version="1.0">
+   <Group id="87599" name="Maximum" uid="1035992">
+      <Point id="1035966" name="Active Power L1 - max" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="S32" index="101" type="Holding"/>
+         <Calculate scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035967" name="Active Power L2 - max" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="S32" index="111" type="Holding"/>
+         <Calculate scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035968" name="Active Power L3 - max" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="S32" index="121" type="Holding"/>
+         <Calculate scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035969" name="Cos Phi - max" unit="cos phi">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="133" type="Holding"/>
+         <Calculate scaling="100.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035970" name="Current L1 - max" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="S32" index="99" type="Holding"/>
+         <Calculate scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035971" name="Current L2 - max" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="S32" index="109" type="Holding"/>
+         <Calculate scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035972" name="Current L3 - max" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="S32" index="119" type="Holding"/>
+         <Calculate scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035973" name="Frequency - max" unit="Hz">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="137" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035974" name="Line Voltage L1-2 - max" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="139" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035975" name="Line Voltage L2-3 - max" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="141" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035976" name="Line Voltage L3-1 - max" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="143" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035977" name="Power Factor L1 - max" unit="PF">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="105" type="Holding"/>
+         <Calculate scaling="100.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035978" name="Power Factor L2 - max" unit="PF">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="115" type="Holding"/>
+         <Calculate scaling="100.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035979" name="Power Factor L3 - max" unit="PF">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="125" type="Holding"/>
+         <Calculate scaling="100.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035980" name="Reactive Power L1 - max" unit="Kvar">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="103" type="Holding"/>
+         <Calculate scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035981" name="Reactive Power L2 - max" unit="Kvar">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="113" type="Holding"/>
+         <Calculate scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035982" name="Reactive Power L3 - max" unit="Kvar">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="123" type="Holding"/>
+         <Calculate scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035983" name="Total Active Energy - max" unit="kWh">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="205" type="Holding"/>
+         <Calculate scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035985" name="Total Active Power - max" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="127" type="Holding"/>
+         <Calculate decimals="0" scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035986" name="Total Apparent Power - max" unit="Kva">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="163" type="Holding"/>
+         <Calculate scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035987" name="Total Capacitive Power - max" unit="KvarC">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="131" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1035988" name="Total Power Factor - max" unit="PF">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="135" type="Holding"/>
+         <Calculate decimals="2" scaling="100.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035989" name="Voltage phase L1 - max" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="163" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035990" name="Voltage phase L2 - max" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="107" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035991" name="Voltage phase L3 - max" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="117" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="86561" name="Measurements" uid="1028919">
+      <Point id="1022630" name="Active Power L1" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="S32" index="5" type="Holding"/>
+         <Calculate decimals="0" scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1022614" name="Active Power L2" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="S32" index="15" type="Holding"/>
+         <Calculate decimals="0" scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1022635" name="Active Power L3" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="S32" index="25" type="Holding"/>
+         <Calculate decimals="0" scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1022638" name="Cos Phi" unit="cos phi">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="37" type="Holding"/>
+         <Calculate decimals="2" scaling="100.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1022615" name="Current L1" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="S32" index="3" type="Holding"/>
+         <Calculate decimals="0" scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1022616" name="Current L2" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="S32" index="13" type="Holding"/>
+         <Calculate decimals="0" scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1022617" name="Current L3" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="S32" index="23" type="Holding"/>
+         <Calculate decimals="0" scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1028915" name="Frequency" unit="Hz">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="41" type="Holding"/>
+         <Calculate decimals="2" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1022624" name="Line Voltage L1-2" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="43" type="Holding"/>
+         <Calculate decimals="0" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1022625" name="Line Voltage L2-3" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="45" type="Holding"/>
+         <Calculate decimals="0" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1022626" name="Line Voltage L3-1" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="47" type="Holding"/>
+         <Calculate decimals="0" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1022632" name="Power Factor L1" unit="PF">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="9" type="Holding"/>
+         <Calculate decimals="2" scaling="100.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1022634" name="Power Factor L2" unit="PF">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="19" type="Holding"/>
+         <Calculate decimals="2" scaling="100.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1022637" name="Power Factor L3" unit="PF">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="29" type="Holding"/>
+         <Calculate decimals="2" scaling="100.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1022631" name="Reactive Power L1" unit="Kvar">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="7" type="Holding"/>
+         <Calculate decimals="0" scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1022633" name="Reactive Power L2" unit="Kvar">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="17" type="Holding"/>
+         <Calculate decimals="0" scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1022636" name="Reactive Power L3" unit="Kvar">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="27" type="Holding"/>
+         <Calculate scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1028918" name="Total Active Energy" unit="kWh">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="61" type="Holding"/>
+         <Calculate decimals="0" scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1022619" name="Total Active Power" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="S32" index="31" type="Holding"/>
+         <Calculate decimals="0" scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1028917" name="Total Apparent Power" unit="Kva">
+         <Type>ShowValue</Type>
+         <Address format="S32" index="67" type="Holding"/>
+         <Calculate decimals="0" scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1028916" name="Total Capacitive Power " unit="KvarC">
+         <Type>ShowValue</Type>
+         <Address format="S32" index="35" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="1022618" name="Total Power Factor" unit="PF">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="39" type="Holding"/>
+         <Calculate decimals="2" scaling="100.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1022620" name="Voltage phase L1" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="1" type="Holding"/>
+         <Calculate decimals="0" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1022621" name="Voltage phase L2" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="11" type="Holding"/>
+         <Calculate decimals="0" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1022622" name="Voltage phase L3" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="21" type="Holding"/>
+         <Calculate decimals="0" scaling="10.0"/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="87587" name="Minimum" uid="1035864">
+      <Point id="1035704" name="Active Power L1 - min" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="S32" index="197" type="Holding"/>
+         <Calculate scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035705" name="Active Power L2 - min" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="S32" index="207" type="Holding"/>
+         <Calculate scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035706" name="Active Power L3 - min" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="S32" index="217" type="Holding"/>
+         <Calculate scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035707" name="Cos Phi - min" unit="cos phi">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="229" type="Holding"/>
+         <Calculate scaling="100.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035708" name="Current L1 - min" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="S32" index="195" type="Holding"/>
+         <Calculate scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035709" name="Current L2 - min" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="S32" index="205" type="Holding"/>
+         <Calculate scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035710" name="Current L3 - min" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="S32" index="215" type="Holding"/>
+         <Calculate scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035711" name="Frequency - min" unit="Hz">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="233" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035713" name="Line Voltage L1-2 - min" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="235" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035714" name="Line Voltage L3-1 - min" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="239" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035715" name="Power Factor L1 - min" unit="PF">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="201" type="Holding"/>
+         <Calculate scaling="100.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035716" name="Power Factor L2 - min" unit="PF">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="211" type="Holding"/>
+         <Calculate scaling="100.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035717" name="Power Factor L3 - min" unit="PF">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="221" type="Holding"/>
+         <Calculate scaling="100.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035718" name="Reactive Power L1 - min" unit="Kvar">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="199" type="Holding"/>
+         <Calculate scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035719" name="Reactive Power L2 - min" unit="Kvar">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="209" type="Holding"/>
+         <Calculate scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035720" name="Reactive Power L3 - min" unit="Kvar">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="219" type="Holding"/>
+         <Calculate scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035721" name="Total Active Energy - min" unit="kWh">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="253" type="Holding"/>
+         <Calculate scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035722" name="Total Active Power - min " unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="223" type="Holding"/>
+         <Calculate decimals="0" scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035743" name="Total Apparent Power - min" unit="Kva">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="259" type="Holding"/>
+         <Calculate scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035744" name="Total Capacitive Power - min" unit="KvarC">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="227" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1035745" name="Total Power Factor - min" unit="PF">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="231" type="Holding"/>
+         <Calculate decimals="2" scaling="100.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035746" name="Voltage phase L1 - min" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="193" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035841" name="Voltage phase L2 - min" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="203" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1035863" name="Voltage phase L3 - min" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="213" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="86562" name="Test" uid="1022645">
+      <Point id="1022639" name="Line Voltage L1-2 x1" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="43" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1022642" name="Line Voltage L1-2 x10" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="43" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1022640" name="Line Voltage L2-3 x1" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="45" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1022643" name="Line Voltage L2-3 x10" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="45" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1022641" name="Line Voltage L3-1 x1" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="47" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1022644" name="Line Voltage L3-1 x10" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="47" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+   </Group>
+</ControllerTemplate>

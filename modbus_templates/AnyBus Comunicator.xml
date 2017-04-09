@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ControllerTemplate encoding="UTF-8" name="AnyBus Comunicator" uid="100483" version="1.0">
+   <Group id="100482" name="AEI - Remraam Test" uid="1197857">
+      <Point id="1197854" name="0x0004 - Power W" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="3" type="Holding"/>
+         <Calculate decimals="0" scaling="0.1"/>
+         <Enum/>
+      </Point>
+      <Point id="1197855" name="0x000C - Current Max %25">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="7" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1197856" name="0x0200 - Write Max %25">
+         <Type>SetValueWO</Type>
+         <Address format="U16" index="1025" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+   </Group>
+</ControllerTemplate>

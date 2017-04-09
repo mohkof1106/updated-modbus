@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ControllerTemplate encoding="UTF-8" name="MIC-2 1600A CTS" uid="88821" version="1.0">
+   <Group id="88818" name="CTs %26 Configuration" uid="1050377">
+      <Point id="1050371" name="CT1" unit="A">
+         <Type>SetValue</Type>
+         <Address format="U16" index="4104" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1050372" name="CT2" unit="A">
+         <Type>SetValue</Type>
+         <Address format="U16" index="4105" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1050373" name="PT 1%28High 16 bit%29" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="4101" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1050374" name="PT 1%28Low 16 bit%29" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="4102" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1050375" name="PT2" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="4103" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1050376" name="U16" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="265" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="88819" name="I%2FO" uid="1050380">
+      <Point id="1050377" name="IO11 DI1" unit="">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="1" type="Discrete"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1050378" name="IO11 Relay 1" unit="">
+         <Type>SetValue</Type>
+         <Address format="Bool" index="1" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1050379" name="IO11 Relay 2" unit="">
+         <Type>SetValue</Type>
+         <Address format="Bool" index="2" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="88820" name="Measurements" uid="1050406">
+      <Point id="1050380" name="01 Voltage L1N" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16386" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="1050381" name="02 Voltage L2N" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16388" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="1050382" name="03 Voltage L3N" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16390" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="1050383" name="04 Voltage Lavg" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16392" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="1050384" name="05 Voltage L1L2" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16394" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="1050385" name="06 Voltage L2L3" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16396" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="1050386" name="07 Voltage L3L1" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16398" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="1050387" name="08 Voltage LLavg" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16400" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="1050388" name="09 Current L1" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16402" type="Holding"/>
+         <Calculate decimals="0" scaling="0.003125"/>
+         <Enum/>
+      </Point>
+      <Point id="1050389" name="10 Current L2" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16404" type="Holding"/>
+         <Calculate decimals="0" scaling="0.003125"/>
+         <Enum/>
+      </Point>
+      <Point id="1050390" name="11 Current L3" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16406" type="Holding"/>
+         <Calculate decimals="2" scaling="0.003125"/>
+         <Enum/>
+      </Point>
+      <Point id="1050391" name="12 Current Lavg" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16408" type="Holding"/>
+         <Calculate decimals="2" scaling="0.003125"/>
+         <Enum/>
+      </Point>
+      <Point id="1050392" name="13 Current N" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16410" type="Holding"/>
+         <Calculate decimals="0" scaling="0.003125"/>
+         <Enum/>
+      </Point>
+      <Point id="1050393" name="14 Power L1" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16412" type="Holding"/>
+         <Calculate decimals="0" scaling="3.125"/>
+         <Enum/>
+      </Point>
+      <Point id="1050394" name="15 Power L2" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16414" type="Holding"/>
+         <Calculate decimals="0" scaling="3.125"/>
+         <Enum/>
+      </Point>
+      <Point id="1050395" name="16 Power L3" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16416" type="Holding"/>
+         <Calculate decimals="0" scaling="3.125"/>
+         <Enum/>
+      </Point>
+      <Point id="1050396" name="17 Power Factor" unit="PF">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16442" type="Holding"/>
+         <Calculate decimals="2"/>
+         <Enum/>
+      </Point>
+      <Point id="1050397" name="20 Avg current" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16408" type="Holding"/>
+         <Calculate decimals="0" scaling="0.003125"/>
+         <Enum/>
+      </Point>
+      <Point id="1050398" name="Apparent Power Demand" unit="VA">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16454" type="Holding"/>
+         <Calculate decimals="0" scaling="0.3125"/>
+         <Enum/>
+      </Point>
+      <Point id="1050399" name="Energy Exported" unit="kWh">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="16459" type="Holding"/>
+         <Calculate decimals="0" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1050400" name="Energy Imported" unit="kWh">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="16457" type="Holding"/>
+         <Calculate decimals="0" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1050401" name="Frequency MIC-2" unit="Hz">
+         <Type>ShowValue</Type>
+         <Address format="Float" index="16385" type="Holding"/>
+         <Calculate decimals="2"/>
+         <Enum/>
+      </Point>
+      <Point id="1050402" name="Power Demand" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16450" type="Holding"/>
+         <Calculate decimals="0" scaling="3.125"/>
+         <Enum/>
+      </Point>
+      <Point id="1050403" name="System Apparent Power" unit="kVA">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16434" type="Holding"/>
+         <Calculate decimals="0" scaling="3.125"/>
+         <Enum/>
+      </Point>
+      <Point id="1050404" name="System Power" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="16418" type="Holding"/>
+         <Calculate decimals="0" scaling="3.125"/>
+         <Enum/>
+      </Point>
+      <Point id="1050405" name="Total Energy" unit="kWh">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="16465" type="Holding"/>
+         <Calculate decimals="0" scaling="10.0"/>
+         <Enum/>
+      </Point>
+   </Group>
+</ControllerTemplate>

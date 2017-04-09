@@ -1,0 +1,1909 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ControllerTemplate encoding="UTF-8" name="AGC-4 Enerwhere Custom" uid="88362" version="1.0">
+   <Group id="88361" name="Alarm mixed set" uid="1048147">
+      <Point id="1043863" name="1000 - Reverse power 1">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="49" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum/>
+      </Point>
+      <Point id="1043864" name="1010 - Reverse power 2">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="49" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum/>
+      </Point>
+      <Point id="1043851" name="1030 - Overcurrent 1">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="49" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum/>
+      </Point>
+      <Point id="1043852" name="1040 - Overcurrent 2">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="49" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum/>
+      </Point>
+      <Point id="1043853" name="1050 - Overcurrent 3">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="49" type="Holding"/>
+         <Calculate mask="32"/>
+         <Enum/>
+      </Point>
+      <Point id="1043854" name="1060 - Overcurrent 4">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="49" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum/>
+      </Point>
+      <Point id="1043867" name="1110 - Voltage dependant overcurrent">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="49" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum/>
+      </Point>
+      <Point id="1043836" name="1130 - Fast overcurrent 1">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="49" type="Holding"/>
+         <Calculate mask="512"/>
+         <Enum/>
+      </Point>
+      <Point id="1043837" name="1140 - Fast overcurrent 2">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="49" type="Holding"/>
+         <Calculate mask="1024"/>
+         <Enum/>
+      </Point>
+      <Point id="1043844" name="1150 - G%2FM%2FBA overvoltage 1">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="49" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum/>
+      </Point>
+      <Point id="1043846" name="1160 - G%2FM%2FBA overvoltage 2">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="49" type="Holding"/>
+         <Calculate mask="4096"/>
+         <Enum/>
+      </Point>
+      <Point id="1043845" name="1170 - G%2FM%2FBA undervoltage 1">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="49" type="Holding"/>
+         <Calculate mask="8192"/>
+         <Enum/>
+      </Point>
+      <Point id="1043847" name="1180 - G%2FM%2FBA undervoltage 2">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="49" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum/>
+      </Point>
+      <Point id="1043848" name="1190 - G%2FM%2FBA undervoltage 3">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="49" type="Holding"/>
+         <Calculate mask="32768"/>
+         <Enum/>
+      </Point>
+      <Point id="1043838" name="1210 - G%2FM%2FBA Overfrequency 1">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum/>
+      </Point>
+      <Point id="1043839" name="1220 - G%2FM%2FBA Overfrequency 2">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum/>
+      </Point>
+      <Point id="1043840" name="1230 - G%2FM%2FBA Overfrequency 3">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum/>
+      </Point>
+      <Point id="1043842" name="1240 - G%2FM%2FBA Underfrequency 1">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum/>
+      </Point>
+      <Point id="1043843" name="1250 - G%2FM%2FBA Underfrequency 2">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum/>
+      </Point>
+      <Point id="1043841" name="1260 - G%2FM%2FBA Undefrequency 3">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate mask="32"/>
+         <Enum/>
+      </Point>
+      <Point id="1043821" name="1270 - Busbar overvoltage 1">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum/>
+      </Point>
+      <Point id="1043822" name="1280 - Busbar overvoltage 2">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate mask="128"/>
+         <Enum/>
+      </Point>
+      <Point id="1043823" name="1290 - Busbar overvoltage 3">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum/>
+      </Point>
+      <Point id="1043829" name="1300 - Busbar undervoltage 1">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate mask="512"/>
+         <Enum/>
+      </Point>
+      <Point id="1043830" name="1310 - Busbar undervoltage 2">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate mask="1024"/>
+         <Enum/>
+      </Point>
+      <Point id="1043831" name="1320 - Busbar undervoltage 3">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum/>
+      </Point>
+      <Point id="1043832" name="1330 - Busbar undervoltage 4">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate mask="4096"/>
+         <Enum/>
+      </Point>
+      <Point id="1043818" name="1350 - Busbar overfrequency 1">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate mask="8192"/>
+         <Enum/>
+      </Point>
+      <Point id="1043819" name="1360 - Busbar overfrequency 2">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum/>
+      </Point>
+      <Point id="1043820" name="1370 - Busbar overfrequency 3">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate mask="32768"/>
+         <Enum/>
+      </Point>
+      <Point id="1043825" name="1380 - Busbar underfrequency 1">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="51" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum/>
+      </Point>
+      <Point id="1043826" name="1390 - Busbar underfrequency 2">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="51" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum/>
+      </Point>
+      <Point id="1043827" name="1400 - Busbar underfrequency 3">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="51" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum/>
+      </Point>
+      <Point id="1043828" name="1410 - Busbar underfrequency 4">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="51" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum/>
+      </Point>
+      <Point id="1043833" name="1420 - Df%2Fdt %28ROCOF%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="51" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum/>
+      </Point>
+      <Point id="1043866" name="1430 - Vector jump">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="51" type="Holding"/>
+         <Calculate mask="32"/>
+         <Enum/>
+      </Point>
+      <Point id="1043824" name="1440 - Busbar positive sequence voltage low">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="51" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum/>
+      </Point>
+      <Point id="1043856" name="1450 - Overload 1">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="51" type="Holding"/>
+         <Calculate mask="128"/>
+         <Enum/>
+      </Point>
+      <Point id="1043855" name="1460 - Overload 2">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="51" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum/>
+      </Point>
+      <Point id="1043857" name="1470 - Overload 3">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="51" type="Holding"/>
+         <Calculate mask="512"/>
+         <Enum/>
+      </Point>
+      <Point id="1043858" name="1480 - Overload 4">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="51" type="Holding"/>
+         <Calculate mask="1024"/>
+         <Enum/>
+      </Point>
+      <Point id="1043859" name="1490 - Overload 5">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="51" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum/>
+      </Point>
+      <Point id="1043815" name="1500 - Unbalanced Current">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1003" type="Holding"/>
+         <Calculate mask="4096"/>
+         <Enum/>
+      </Point>
+      <Point id="1043816" name="1510 - Unbalanced voltage">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1003" type="Holding"/>
+         <Calculate mask="8192"/>
+         <Enum/>
+      </Point>
+      <Point id="1043862" name="1520 - Reactive power import">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="51" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum/>
+      </Point>
+      <Point id="1043861" name="1530 - Reactive power export">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="51" type="Holding"/>
+         <Calculate mask="32768"/>
+         <Enum/>
+      </Point>
+      <Point id="1043869" name="1980 - GB External Trip">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1005" type="Input"/>
+         <Calculate mask="256"/>
+         <Enum/>
+      </Point>
+      <Point id="1048068" name="2140 - Mains breaker synchronisation failure">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="52" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum/>
+      </Point>
+      <Point id="1043860" name="2150 - Phase sequence error">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="52" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum/>
+      </Point>
+      <Point id="1043850" name="2160 - GB%2FTB%2FBTB Open failure">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="52" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum/>
+      </Point>
+      <Point id="1043849" name="2170 - GB%2FTB%2FBTB Breaker Close Failure">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="52" type="Holding"/>
+         <Calculate mask="32"/>
+         <Enum/>
+      </Point>
+      <Point id="1043807" name="2180 - GB%2FTB%2FBTB breaker position failure">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="52" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum/>
+      </Point>
+      <Point id="1043812" name="2200 - MB open failure">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="52" type="Holding"/>
+         <Calculate mask="128"/>
+         <Enum/>
+      </Point>
+      <Point id="1043810" name="2210 - MB close failure">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="52" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum/>
+      </Point>
+      <Point id="1043813" name="2220 - MB position failure">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="52" type="Holding"/>
+         <Calculate mask="512"/>
+         <Enum/>
+      </Point>
+      <Point id="1043806" name="2270 - Close before excitation">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1006" type="Holding"/>
+         <Calculate mask="1024"/>
+         <Enum/>
+      </Point>
+      <Point id="1043808" name="2560 - Governor regulation fail">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1007" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum/>
+      </Point>
+      <Point id="1043805" name="2680 - AVR regulation failure 2680">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1007" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum/>
+      </Point>
+      <Point id="1043817" name="3150 - A%2FC power supply fail">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="53" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum/>
+      </Point>
+      <Point id="1043868" name="3490 - Emergency Stop">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="55" type="Input"/>
+         <Calculate mask="4096"/>
+         <Enum/>
+      </Point>
+      <Point id="1043834" name="3490 - Emergency stop">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="55" type="Holding"/>
+         <Calculate mask="4096"/>
+         <Enum/>
+      </Point>
+      <Point id="1043865" name="4570 - Start failure">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="58" type="Holding"/>
+         <Calculate mask="32768"/>
+         <Enum/>
+      </Point>
+      <Point id="1043814" name="4580 - Stop failure">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1015" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum/>
+      </Point>
+      <Point id="1048106" name="4960 - U%3C auxiliary power supply terminal 1">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1015" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum/>
+      </Point>
+      <Point id="1048144" name="4970 - U%3Eauxiliary power supply terminal 1">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1015" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum/>
+      </Point>
+      <Point id="1048145" name="4980 - U%3Cauxiliary power supply terminal 98">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1015" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum/>
+      </Point>
+      <Point id="1048146" name="4990 - U%3Eauxiliary power supply terminal 98">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1015" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum/>
+      </Point>
+      <Point id="1043835" name="7570 - Engine communication error">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="61" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum/>
+      </Point>
+      <Point id="1048073" name="7600 - EIC overspeed">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="61" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum/>
+      </Point>
+      <Point id="1048076" name="7610 - EIC coolant temp. 1">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="61" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum/>
+      </Point>
+      <Point id="1048077" name="7620 - EIC coolant temp. 2">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="61" type="Holding"/>
+         <Calculate mask="32"/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="82064" name="Control Table" uid="1010541">
+      <Point id="1004269" name="Ack. Alarms">
+         <Type>SetEnumWO</Type>
+         <Address format="Bool" index="10" type="Coil"/>
+         <Calculate/>
+         <Enum>1%3DYes%3B0%3DNo</Enum>
+      </Point>
+      <Point id="1010540" name="Ack. Alarms %28write only%29" unit=" ">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="4096" type="Input"/>
+         <Calculate mask="1"/>
+         <Enum/>
+      </Point>
+      <Point id="962427" name="Remote GB Close">
+         <Type>SetEnumWO</Type>
+         <Address format="Bool" index="2" type="Coil"/>
+         <Calculate/>
+         <Enum>1%3DOpen%3B0%3DClosed</Enum>
+      </Point>
+      <Point id="962428" name="Remote GB Open">
+         <Type>SetEnumWO</Type>
+         <Address format="Bool" index="3" type="Coil"/>
+         <Calculate/>
+         <Enum>0%3DClose%3B1%3DOpened</Enum>
+      </Point>
+      <Point id="962429" name="Remote MB Close" unit="">
+         <Type>SetValueWO</Type>
+         <Address format="Bool" index="25" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962430" name="Remote MB Open" unit="">
+         <Type>SetValueWO</Type>
+         <Address format="Bool" index="26" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962431" name="Remote Start">
+         <Type>SetEnumWO</Type>
+         <Address format="Bool" index="1" type="Coil"/>
+         <Calculate/>
+         <Enum>1%3DStart</Enum>
+      </Point>
+      <Point id="962432" name="Remote Stop">
+         <Type>SetEnumWO</Type>
+         <Address format="Bool" index="4" type="Coil"/>
+         <Calculate/>
+         <Enum>1%3DStop</Enum>
+      </Point>
+      <Point id="962433" name="Set AMF Mode" unit="">
+         <Type>SetValueWO</Type>
+         <Address format="Bool" index="18" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962434" name="Set Auto Mode">
+         <Type>SetEnumWO</Type>
+         <Address format="Bool" index="30" type="Coil"/>
+         <Calculate/>
+         <Enum>1%3DAuto Mode</Enum>
+      </Point>
+      <Point id="962435" name="Set Auto Start%2FStop" unit="">
+         <Type>SetValueWO</Type>
+         <Address format="Bool" index="27" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962436" name="Set DI 24" unit="">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="58611" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum>0%3DOff%3B1%3DOn</Enum>
+      </Point>
+      <Point id="962437" name="Set Fixed Power Mode" unit="">
+         <Type>SetValueWO</Type>
+         <Address format="Bool" index="20" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962438" name="Set Island Mode" unit="">
+         <Type>SetValueWO</Type>
+         <Address format="Bool" index="17" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962439" name="Set Load Take Over Mode" unit="">
+         <Type>SetValueWO</Type>
+         <Address format="Bool" index="22" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962440" name="Set Mains Power Export Mode" unit="">
+         <Type>SetValueWO</Type>
+         <Address format="Bool" index="21" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962441" name="Set Manual Mode">
+         <Type>SetEnumWO</Type>
+         <Address format="Bool" index="28" type="Coil"/>
+         <Calculate/>
+         <Enum>1%3DManual Mode</Enum>
+      </Point>
+      <Point id="962442" name="Set Peak Shaving Mode" unit="">
+         <Type>SetValueWO</Type>
+         <Address format="Bool" index="19" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962443" name="Set Semi Auto Mode">
+         <Type>SetEnumWO</Type>
+         <Address format="Bool" index="29" type="Coil"/>
+         <Calculate/>
+         <Enum>1%3DSemi Auto</Enum>
+      </Point>
+      <Point id="962444" name="Set Test Mode" unit="">
+         <Type>SetValueWO</Type>
+         <Address format="Bool" index="31" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="86708" name="Date %26 Time" uid="1024719">
+      <Point id="1024715" name="01 - Day">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="58003" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024714" name="02 - Month">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="58002" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024713" name="03 - Year">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="58001" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024716" name="Hours">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="58005" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024717" name="Minutes">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="58006" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024718" name="Seconds">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="58007" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="86564" name="Extended Alarms" uid="1027437">
+      <Point id="1022645" name="A%2FC power supply fail %283150%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="53" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum/>
+      </Point>
+      <Point id="1024618" name="AVR regulation failure %282680%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1007" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum/>
+      </Point>
+      <Point id="1026572" name="Busbar overfrequency 1 %281350%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate mask="8192"/>
+         <Enum/>
+      </Point>
+      <Point id="1026573" name="Busbar overfrequency 2 %281360%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum/>
+      </Point>
+      <Point id="1026606" name="Busbar overfrequency 3 %281370%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate mask="32768"/>
+         <Enum/>
+      </Point>
+      <Point id="1026172" name="Busbar overvoltage 1 %281270%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum/>
+      </Point>
+      <Point id="1026173" name="Busbar overvoltage 2 %281280%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate mask="128"/>
+         <Enum/>
+      </Point>
+      <Point id="1026335" name="Busbar overvoltage 3 %281290%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum/>
+      </Point>
+      <Point id="1026645" name="Busbar positive sequence voltage low %281440%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="51" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum/>
+      </Point>
+      <Point id="1026607" name="Busbar underfrequency 1 %281380%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="51" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum/>
+      </Point>
+      <Point id="1026608" name="Busbar underfrequency 2 %281390%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="51" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum/>
+      </Point>
+      <Point id="1026609" name="Busbar underfrequency 3 %281400%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="51" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum/>
+      </Point>
+      <Point id="1026610" name="Busbar underfrequency 4 %281410%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="51" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum/>
+      </Point>
+      <Point id="1026568" name="Busbar undervoltage 1 %281300%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate mask="512"/>
+         <Enum/>
+      </Point>
+      <Point id="1026569" name="Busbar undervoltage 2 %281310%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate mask="1024"/>
+         <Enum/>
+      </Point>
+      <Point id="1026570" name="Busbar undervoltage 3 %281320%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum/>
+      </Point>
+      <Point id="1026571" name="Busbar undervoltage 4 %281330%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate mask="4096"/>
+         <Enum/>
+      </Point>
+      <Point id="1027436" name="Close before excitation %282270%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1006" type="Holding"/>
+         <Calculate mask="1024"/>
+         <Enum/>
+      </Point>
+      <Point id="1026611" name="Df%2Fdt %28ROCOF%29 %281420%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="51" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum/>
+      </Point>
+      <Point id="1024634" name="Emergency stop %283490%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="55" type="Holding"/>
+         <Calculate mask="4096"/>
+         <Enum/>
+      </Point>
+      <Point id="1024632" name="Engine communication error %287570%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="61" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum/>
+      </Point>
+      <Point id="1024635" name="Fast overcurrent 1 %281130%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="49" type="Holding"/>
+         <Calculate mask="512"/>
+         <Enum/>
+      </Point>
+      <Point id="1024638" name="Fast overcurrent 2 %281140%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="49" type="Holding"/>
+         <Calculate mask="1024"/>
+         <Enum/>
+      </Point>
+      <Point id="1024621" name="G%2FM%2FBA Overfrequency 1 %281210%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum/>
+      </Point>
+      <Point id="1024622" name="G%2FM%2FBA Overfrequency 2 %281220%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum/>
+      </Point>
+      <Point id="1026170" name="G%2FM%2FBA Overfrequency 3 %281230%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum/>
+      </Point>
+      <Point id="1026564" name="G%2FM%2FBA overvoltage 1 %281150%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="49" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum/>
+      </Point>
+      <Point id="1026565" name="G%2FM%2FBA overvoltage 2 %281160%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="49" type="Holding"/>
+         <Calculate mask="4096"/>
+         <Enum/>
+      </Point>
+      <Point id="1026171" name="G%2FM%2FBA Undefrequency 3 %281260%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate mask="32"/>
+         <Enum/>
+      </Point>
+      <Point id="1024623" name="G%2FM%2FBA Underfrequency 1 %281240%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum/>
+      </Point>
+      <Point id="1024626" name="G%2FM%2FBA Underfrequency 2 %281250%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="50" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum/>
+      </Point>
+      <Point id="1026566" name="G%2FM%2FBA undervoltage 1 %281170%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="49" type="Holding"/>
+         <Calculate mask="8192"/>
+         <Enum/>
+      </Point>
+      <Point id="1024629" name="G%2FM%2FBA undervoltage 2 %281180%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="49" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum/>
+      </Point>
+      <Point id="1026567" name="G%2FM%2FBA undervoltage 3 %281190%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="49" type="Holding"/>
+         <Calculate mask="32768"/>
+         <Enum/>
+      </Point>
+      <Point id="1024606" name="GB%2FTB%2FBTB Breaker Close Failure %282170%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="52" type="Holding"/>
+         <Calculate mask="32"/>
+         <Enum/>
+      </Point>
+      <Point id="1027432" name="GB%2FTB%2FBTB breaker position failure %282180%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1006" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum/>
+      </Point>
+      <Point id="1024601" name="GB%2FTB%2FBTB Open failure %282160%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="52" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum/>
+      </Point>
+      <Point id="1024620" name="Governor regulation fail %282560%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1007" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum/>
+      </Point>
+      <Point id="1027434" name="MB close failure %282210%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1006" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum/>
+      </Point>
+      <Point id="1027433" name="MB open failure %282200%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1006" type="Holding"/>
+         <Calculate mask="128"/>
+         <Enum/>
+      </Point>
+      <Point id="1027435" name="MB position failure %282220%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1006" type="Holding"/>
+         <Calculate mask="512"/>
+         <Enum/>
+      </Point>
+      <Point id="1027431" name="Negative sequence current %281540%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1004" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum/>
+      </Point>
+      <Point id="1024609" name="Overcurrent 1 %281030%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="49" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum/>
+      </Point>
+      <Point id="1024603" name="Overcurrent 2 %281040%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="49" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum/>
+      </Point>
+      <Point id="1024605" name="Overcurrent 3 %281050%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="49" type="Holding"/>
+         <Calculate mask="32"/>
+         <Enum/>
+      </Point>
+      <Point id="1024604" name="Overcurrent 4 %281060%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="49" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum/>
+      </Point>
+      <Point id="1024611" name="Overload 1 %281450%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="51" type="Holding"/>
+         <Calculate mask="128"/>
+         <Enum/>
+      </Point>
+      <Point id="1024615" name="Overload 2 %281460%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="51" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum/>
+      </Point>
+      <Point id="1024619" name="Overload 3 %281470%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="51" type="Holding"/>
+         <Calculate mask="512"/>
+         <Enum/>
+      </Point>
+      <Point id="1026646" name="Overload 4 %281480%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="51" type="Holding"/>
+         <Calculate mask="1024"/>
+         <Enum/>
+      </Point>
+      <Point id="1026647" name="Overload 5 %281490%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="51" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum/>
+      </Point>
+      <Point id="1024617" name="Phase sequence error %282150%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="52" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum/>
+      </Point>
+      <Point id="1026649" name="Reactive power export %281530%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="51" type="Holding"/>
+         <Calculate mask="32768"/>
+         <Enum/>
+      </Point>
+      <Point id="1026648" name="Reactive power import %281520%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="51" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum/>
+      </Point>
+      <Point id="1024625" name="Reverse power 1 %281000%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="49" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum/>
+      </Point>
+      <Point id="1024627" name="Reverse power 2 %281010%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="49" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum/>
+      </Point>
+      <Point id="1024613" name="Start failure %284570%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="58" type="Holding"/>
+         <Calculate mask="32768"/>
+         <Enum/>
+      </Point>
+      <Point id="1024607" name="Stop failure %284580%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1015" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum/>
+      </Point>
+      <Point id="1024602" name="Unbalanced Current %281500%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1003" type="Holding"/>
+         <Calculate mask="4096"/>
+         <Enum/>
+      </Point>
+      <Point id="1024631" name="Unbalanced voltage %281510%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1003" type="Holding"/>
+         <Calculate mask="8192"/>
+         <Enum/>
+      </Point>
+      <Point id="1026612" name="Vector jump %281430%29 %2B">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="51" type="Holding"/>
+         <Calculate mask="32"/>
+         <Enum/>
+      </Point>
+      <Point id="1024624" name="Voltage dependant overcurrent %281110%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="49" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="86706" name="Extended Alarms %28USW Addresses%29" uid="1024677">
+      <Point id="1024608" name="AC Supply Fail %283150%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="199" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024651" name="All DGs Missing %287533%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="568" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024668" name="Appl. Hazard %287570%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="1191" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024643" name="AVR Regulation Failure %282680%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="162" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024675" name="CANshare ID">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="823" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024646" name="DG Missing %287535%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="570" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024674" name="DG Optimum Load %2813004%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1558" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024639" name="DG Start Failure %284570%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="313" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024633" name="DG Stop Failure %284580%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="314" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024670" name="Emergency Stop %283490%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="236" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024667" name="Engine Com. Error %287570%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="577" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024672" name="Fast Overcurrent 1 %281130%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="10" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024673" name="Fast Overcurrent 2 %281140%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="11" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024630" name="GB Close Fail %282170%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="102" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024659" name="GB External trip %281981%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="1273" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024610" name="GB Open Fail %282160%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="101" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024652" name="GOV. Regulation Failure %282560%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="134" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024653" name="Grid Over Frequency 1 %281210%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="18" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024654" name="Grid Over Frequency 2 %281220%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="19" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024657" name="Grid Under Frequency 1 %281240%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="21" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024661" name="Grid Under frequency 2 %281250%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="22" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024636" name="Overcurrent 1 %281030%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="4" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024614" name="Overcurrent 2 %281040%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="5" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024616" name="Overcurrent 3 %281050%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="6" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024628" name="Overcurrent 4 %281060%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="7" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024637" name="Overload 1 %281450%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="43" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024640" name="Overload 2 %281460%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="44" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024648" name="Overload 3 %281470%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="45" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024641" name="Phase Sequence Failure %282150%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="12" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024660" name="Reverse Power 1 %281000%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="1" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024662" name="Reverse Power 2 %281010%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="2" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024612" name="Unbalanced Current %281500%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="48" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024666" name="Unbalanced Voltage %281510%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="12" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024663" name="Under Voltage 1 %281170%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="14" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024664" name="Under Voltage 2 %281180%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="15" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024665" name="Under Voltage 3 %281190%29">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="16" type="Coil"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1024676" name="Voltage Dep. Over Current %281110%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="9" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="86707" name="Extended Alarms %28v3%29" uid="1024713">
+      <Point id="1024677" name="A%2FC power supply fail %283150%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1009" type="Input"/>
+         <Calculate mask="2"/>
+         <Enum/>
+      </Point>
+      <Point id="1024696" name="AVR reg. fail %282680%29 ">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1007" type="Input"/>
+         <Calculate mask="4"/>
+         <Enum/>
+      </Point>
+      <Point id="1024706" name="Emergency Stop %283490%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1011" type="Input"/>
+         <Calculate mask="4096"/>
+         <Enum/>
+      </Point>
+      <Point id="1024707" name="Fast overcurrent 1 %281130%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1001" type="Input"/>
+         <Calculate mask="512"/>
+         <Enum/>
+      </Point>
+      <Point id="1024708" name="Fast overcurrent 2 %281140%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1001" type="Input"/>
+         <Calculate mask="1024"/>
+         <Enum/>
+      </Point>
+      <Point id="1024709" name="GB External Trip %281980%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1005" type="Input"/>
+         <Calculate mask="256"/>
+         <Enum/>
+      </Point>
+      <Point id="1024688" name="GB%2FTB%2FBTB close failure %282170%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1006" type="Input"/>
+         <Calculate mask="32"/>
+         <Enum/>
+      </Point>
+      <Point id="1024679" name="GB%2FTB%2FBTB open failure %282160%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1006" type="Input"/>
+         <Calculate mask="16"/>
+         <Enum/>
+      </Point>
+      <Point id="1024697" name="GOV reg.  fail %282560%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1007" type="Input"/>
+         <Calculate mask="1"/>
+         <Enum/>
+      </Point>
+      <Point id="1024710" name="MB External Trip %281980%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1005" type="Input"/>
+         <Calculate mask="512"/>
+         <Enum/>
+      </Point>
+      <Point id="1024698" name="Over Frequency 1 %281210%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1002" type="Input"/>
+         <Calculate mask="1"/>
+         <Enum/>
+      </Point>
+      <Point id="1024699" name="Over Frequency 2 %281220%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1002" type="Input"/>
+         <Calculate mask="2"/>
+         <Enum/>
+      </Point>
+      <Point id="1024687" name="Overcurrent 1 %281030%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1001" type="Input"/>
+         <Calculate mask="8"/>
+         <Enum/>
+      </Point>
+      <Point id="1024684" name="Overcurrent 2 %281040%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1001" type="Input"/>
+         <Calculate mask="16"/>
+         <Enum/>
+      </Point>
+      <Point id="1024686" name="Overcurrent 3 %281050%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1001" type="Input"/>
+         <Calculate mask="32"/>
+         <Enum/>
+      </Point>
+      <Point id="1024685" name="Overcurrent 4 %281060%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1001" type="Input"/>
+         <Calculate mask="64"/>
+         <Enum/>
+      </Point>
+      <Point id="1024690" name="Overload 1 %281450%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1003" type="Input"/>
+         <Calculate mask="128"/>
+         <Enum/>
+      </Point>
+      <Point id="1024691" name="Overload 2 %281460%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1003" type="Input"/>
+         <Calculate mask="256"/>
+         <Enum/>
+      </Point>
+      <Point id="1024692" name="Overload 3 %281470%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1003" type="Input"/>
+         <Calculate mask="512"/>
+         <Enum/>
+      </Point>
+      <Point id="1024693" name="Overload 4 %281480%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1003" type="Input"/>
+         <Calculate mask="1024"/>
+         <Enum/>
+      </Point>
+      <Point id="1024695" name="Phase seq error %282150%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1006" type="Input"/>
+         <Calculate mask="8"/>
+         <Enum/>
+      </Point>
+      <Point id="1024711" name="Reverse Power 1 %281000%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1001" type="Input"/>
+         <Calculate mask="1"/>
+         <Enum/>
+      </Point>
+      <Point id="1024712" name="Reverse Power 2 %281010%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1001" type="Input"/>
+         <Calculate mask="2"/>
+         <Enum/>
+      </Point>
+      <Point id="1024694" name="Start failure %284570%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1014" type="Input"/>
+         <Calculate mask="32768"/>
+         <Enum/>
+      </Point>
+      <Point id="1024689" name="Stop failure %284580%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1015" type="Input"/>
+         <Calculate mask="1"/>
+         <Enum/>
+      </Point>
+      <Point id="1024683" name="Unbalanced current %281500%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1003" type="Input"/>
+         <Calculate mask="4096"/>
+         <Enum/>
+      </Point>
+      <Point id="1024705" name="Unbalanced Voltage %281510%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1003" type="Input"/>
+         <Calculate mask="16384"/>
+         <Enum/>
+      </Point>
+      <Point id="1024700" name="Under Frequency 1 %281240%29 ">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1002" type="Input"/>
+         <Calculate mask="8"/>
+         <Enum/>
+      </Point>
+      <Point id="1024701" name="Under Frequency 2 %281250%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1002" type="Input"/>
+         <Calculate mask="16"/>
+         <Enum/>
+      </Point>
+      <Point id="1024703" name="Under Voltage 1 %281170%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1001" type="Input"/>
+         <Calculate mask="8192"/>
+         <Enum/>
+      </Point>
+      <Point id="1024704" name="Under Voltage 2 %281180%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1001" type="Input"/>
+         <Calculate mask="16384"/>
+         <Enum/>
+      </Point>
+      <Point id="1024702" name="Voltage Dep. Over Current %281110%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1001" type="Input"/>
+         <Calculate mask="256"/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="82065" name="Measurement Table" uid="1092270">
+      <Point id="962445" name="Absolute Running Hours" unit="h">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="31" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962446" name="Bus-Bar Frequency L1" unit="Hz">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="25" type="Input"/>
+         <Calculate scaling="100.0"/>
+         <Enum/>
+      </Point>
+      <Point id="962447" name="Bus-Bar Phase Angle L1-L2" unit="Deg">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="26" type="Input"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="962448" name="Bus-Bar Voltage UL1-L2" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="19" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962449" name="Bus-Bar Voltage UL1-N" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="22" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962450" name="Bus-Bar Voltage UL2-L3" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="20" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962451" name="Bus-Bar Voltage UL2-N" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="23" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962452" name="Bus-Bar Voltage UL3-L1" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="21" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962453" name="Bus-Bar Voltage UL3-N" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="24" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962454" name="Control Register Adr.0" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="41" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962455" name="Control Register Adr.1" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="42" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962456" name="Control Register Adr.2" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="43" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962457" name="Control Register Adr.3" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="44" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962458" name="Control Register Adr.4" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="45" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962459" name="Control Register Adr.5" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="46" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962460" name="Control Register Adr.6" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="47" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962461" name="Control Register Adr.7" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="48" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962751" name="EIC Fuel Rate" unit="L%2Fh">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="603" type="Input"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="962462" name="Engine Speed" unit="RPM">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="37" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962463" name="Generator Apparent Power" unit="kVA">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="13" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962464" name="Generator CosPhi" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="14" type="Input"/>
+         <Calculate scaling="100.0"/>
+         <Enum/>
+      </Point>
+      <Point id="962465" name="Generator Current L1" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="8" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962466" name="Generator Current L2" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="9" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962467" name="Generator Current L3" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="10" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962468" name="Generator Energy" unit="kWh">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="18" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962469" name="Generator Frequency L1" unit="Hz">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="7" type="Input"/>
+         <Calculate scaling="100.0"/>
+         <Enum/>
+      </Point>
+      <Point id="962470" name="Generator Power" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="11" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1092267" name="Generator power L1" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="517" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1092268" name="Generator power L2" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="518" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1092269" name="Generator power L3" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="519" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962471" name="Generator Reactive Energy" unit="kVArh">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="15" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962472" name="Generator Reactive Power" unit="kVAr">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="12" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962473" name="Generator Voltage UL1-L2 " unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="1" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962474" name="Generator Voltage UL1-N" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="4" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962475" name="Generator Voltage UL2-L3" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="2" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962476" name="Generator Voltage UL2-N" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="5" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962477" name="Generator Voltage UL3-L1" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="3" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962478" name="Generator Voltage UL3-N" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="6" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962479" name="Multi-Input 102" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="38" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962480" name="Multi-Input 105" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="39" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962481" name="Multi-Input 108" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962482" name="No. Of Alarms" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="28" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962483" name="No. Of GB Operations" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="33" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962484" name="No. Of MB Operations" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="34" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962485" name="No. Of Unacknowleged Alarms" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="29" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962486" name="Start Atempts" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="30" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962487" name="Supply Term 1-2" unit="VDC">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="35" type="Input"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="962488" name="Supply Term 98-99" unit="VDC">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="36" type="Input"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="962489" name="Voltage Bus-Bar L1 - Voltage Gen. L1 Angle " unit="Deg">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="27" type="Input"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="82066" name="Status Table" uid="1026519">
+      <Point id="962490" name="AMF Mode" unit="">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="15" type="Discrete"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962491" name="Any Alarm DG1 " unit="UNDER FREQ 1">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="21" type="Discrete"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962492" name="Any Alarm DG2" unit="UNDER FREQ 2">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="22" type="Discrete"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962493" name="Any Alarm DG3" unit="">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="23" type="Discrete"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962494" name="Any Alarm DG4" unit="">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="24" type="Discrete"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962495" name="Any Alarm DG5" unit="">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="25" type="Discrete"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962496" name="Any Alarm DG6" unit="">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="26" type="Discrete"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962497" name="Any Alarm DG7" unit="">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="27" type="Discrete"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962498" name="Any Alarm DG8" unit="">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="28" type="Discrete"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962499" name="Any Alarm Mains" unit="">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="29" type="Discrete"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962500" name="Auto Mode" unit="">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="10" type="Discrete"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962501" name="Block Mode" unit="">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="7" type="Discrete"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962743" name="EIC Communication Error">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="61" type="Input"/>
+         <Calculate mask="1"/>
+         <Enum>0%3D NOT ACT%3B1%3D ACT</Enum>
+      </Point>
+      <Point id="962748" name="EIC Coolant Water Temp. Shutdown">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="61" type="Input"/>
+         <Calculate mask="32"/>
+         <Enum>0%3D NOT ACT%3B1%3D ACT</Enum>
+      </Point>
+      <Point id="962747" name="EIC Coolant Water Temp. Warning">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="61" type="Input"/>
+         <Calculate mask="16"/>
+         <Enum>0%3D NOT ACT%3B1%3D ACT</Enum>
+      </Point>
+      <Point id="962750" name="EIC Oil Pressure Shutdown">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="61" type="Input"/>
+         <Calculate mask="128"/>
+         <Enum>0%3D NOT ACT%3B1%3D ACT</Enum>
+      </Point>
+      <Point id="962749" name="EIC Oil Presure Warning">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="61" type="Input"/>
+         <Calculate mask="64"/>
+         <Enum>0%3D NOT ACT%3B1%3D ACT</Enum>
+      </Point>
+      <Point id="962746" name="EIC Overspeed Shutdown">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="61" type="Input"/>
+         <Calculate mask="8"/>
+         <Enum>0%3D NOT ACT%3B1%3D ACT</Enum>
+      </Point>
+      <Point id="962745" name="EIC Shutdown">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="61" type="Input"/>
+         <Calculate mask="4"/>
+         <Enum>0%3D NOT ACT%3B1%3D ACT</Enum>
+      </Point>
+      <Point id="962744" name="EIC Warning">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="61" type="Input"/>
+         <Calculate mask="2"/>
+         <Enum>0%3D NOT ACT%3B1%3D ACT</Enum>
+      </Point>
+      <Point id="962502" name="Fixed Power Mode" unit="">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="17" type="Discrete"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962503" name="GB Position ON" unit="">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="1" type="Discrete"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962504" name="Generator Running" unit="">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="4" type="Discrete"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1026518" name="Heavy Consumer Request">
+         <Type>ShowEnum</Type>
+         <Address format="Bool" index="22532" type="Discrete"/>
+         <Calculate/>
+         <Enum>1%3DON%3B0%3DOFF</Enum>
+      </Point>
+      <Point id="962505" name="Island Mode" unit="">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="14" type="Discrete"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962506" name="Load Take Over Mode" unit="">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="19" type="Discrete"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962507" name="Mains Failure" unit="">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="6" type="Discrete"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962508" name="Mains Power Export Mode" unit="">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="18" type="Discrete"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962509" name="Manual Mode" unit="">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="8" type="Discrete"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962510" name="MB Position ON" unit="">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="2" type="Discrete"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962511" name="Peak Shaving Mode" unit="">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="16" type="Discrete"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962512" name="Power Management Mode" unit="">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="20" type="Discrete"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962739" name="Reverse Power Shutdown Alarm">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="49" type="Input"/>
+         <Calculate mask="2"/>
+         <Enum>0%3D NOT ACT%3B1%3D ACT</Enum>
+      </Point>
+      <Point id="962737" name="Reverse Power Warning Alarm">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="49" type="Input"/>
+         <Calculate mask="1"/>
+         <Enum>0%3D NOT ACT%3B1%3D ACT</Enum>
+      </Point>
+      <Point id="962513" name="Semi Auto Mode" unit="">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="9" type="Discrete"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962514" name="Status Text" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="59801" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962515" name="Test Mode" unit="">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="11" type="Discrete"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="962516" name="V%2FHz OK" unit="">
+         <Type>ShowValue</Type>
+         <Address format="Bool" index="5" type="Discrete"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+</ControllerTemplate>

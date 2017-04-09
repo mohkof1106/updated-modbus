@@ -1,0 +1,2 @@
+The instructions have moved to modbus_controller/templates/modbus_controller/instructions.html
+or simply http://controller.enerwhere.com/setup/

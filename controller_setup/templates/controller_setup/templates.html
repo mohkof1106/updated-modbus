@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2>Template files manipulation</h2>
+
+<h3>Upload a new file to /modbus_templates/ directory</h3>
+<a href="{% url 'upload' %}">Go to uploads</a>
+
+<h3>Auto fill the database with the template files</h3>
+<a href="{% url 'autotemplates' %}">Click here to generate</a>
+<p>The process may take some time. Runs through the files and adds them to the templates in the DB.</p>
+
+<h3>Template objects in DB</h3>
+<ul>
+{% for template in templates %}
+    <li>{{template.label}}</li>
+    <li>{{template.pretty_string}}</li>
+{% empty %}
+	<p>No plants.</p>
+{% endfor %}
+</ul>
+
+<h3>Remove a template file</h3>
+Go to admin
+{% endblock %}

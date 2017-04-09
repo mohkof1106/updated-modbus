@@ -1,0 +1,46 @@
+{% load staticfiles %}
+<head>
+  <meta charset="utf-8" />
+  <title>Modbus Controller</title>
+  <link rel="stylesheet" type="text/css" href="{% static "css/my_styles.css" %}">
+</head>
+
+
+<div role="banner" id="top">
+  <div class="container">
+    <div class="menu-button"><i class="icon icon-reorder"></i><span>Menu</span></div><div class="nav-menu-on" role="navigation">
+      <ul>
+        <li>
+          <a href="/index/">Index</a>
+        </li>
+        <li>
+          <a href="/admin/">DB Admin</a>
+        </li>
+        <li>
+          <a href="/control/">Control</a>
+        </li>
+        <li>
+          <a href="/templates/">Templates</a>
+        </li>
+        <li>
+          <a href="/upload/">Upload a template</a>
+        </li>
+        <li>
+          <a href="/setup/">Setup</a>
+        </li>
+        <li>
+          <a href="/login/">Login</a>
+        </li>
+        <li>
+          <a href="/logout/">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+
+    <div id="content">
+        {% block content %}{% endblock %}
+    </div>

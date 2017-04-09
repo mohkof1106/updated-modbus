@@ -1,0 +1,3897 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ControllerTemplate encoding="UTF-8" name="ComAp InteliGen NT v3.0" uid="90453" version="1.0">
+   <Group id="90452" name="00 - Test Alarm Vars" uid="1183105">
+      <Point id="1183099" name="00 - 1 - No. Of alarms in the list">
+         <Type>ShowValue</Type>
+         <Address format="Lo U8" index="6354" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1183100" name="00 - 1 - No. Of alarms in the list">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="6354" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1181735" name="00 - Alarm 1">
+         <Type>ShowValue</Type>
+         <Address format="String" index="6667" multiple="20" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1183101" name="00 - Alarm 1.5">
+         <Type>ShowValue</Type>
+         <Address format="String" index="6688" multiple="4" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1183103" name="00 - Alarm 2">
+         <Type>ShowValue</Type>
+         <Address format="String" index="6693" multiple="20" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1183102" name="00 - Alarm 2">
+         <Type>ShowValue</Type>
+         <Address format="String" index="6693" multiple="20" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1183104" name="00 - Alarm 2.5">
+         <Type>ShowValue</Type>
+         <Address format="String" index="6713" multiple="4" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1073477" name="01-STOP PB - Level 1 Alarm">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5750" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum>0%3DLevel 1 inactive%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073479" name="01-STOP PB - Level 2 Alarm">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5750" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum>0%3DLevel 2 inactive%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073480" name="01-STOP PB - Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5750" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073524" name="02 - START PB  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5750" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum>0%3DLevel 1 inactive%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073525" name="02 - START PB  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5750" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum>0%3DLevel 2 inactive%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073526" name="02 - START PB  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5750" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073527" name="03 - FAULT RESET  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5751" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3DLevel 1 inactive%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073528" name="03 - FAULT RESET  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5751" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum>0%3DLevel 2 inactive%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073529" name="03 - FAULT RESET  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5751" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073533" name="04 - GCB ON OFF  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5751" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum>0%3DLevel 1 inactive%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073540" name="04 - GCB ON OFF  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5751" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum>0%3DLevel 2 inactive%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073543" name="04 - GCB ON OFF  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5751" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073535" name="05 - GCB FEED BACK  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5752" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3DLevel 1 inactive%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073544" name="05 - GCB FEED BACK  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5752" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum>0%3DLevel 2 inactive%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073545" name="05 - GCB FEED BACK  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5752" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073536" name="06 - EMERGENCY STOP  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5752" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum>0%3DLevel 1 inactive%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073546" name="06 - EMERGENCY STOP  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5752" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum>0%3DLevel 2 inactive%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073547" name="06 - EMERGENCY STOP  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5752" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073538" name="07 - SYS STOP  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5754" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum>0%3DLevel 1 inactive%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073548" name="07 - SYS STOP  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5754" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum>0%3DLevel 2 inactive%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073549" name="07 - SYS STOP  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5754" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073550" name="08 - Water temp  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5862" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3DLevel 1 inactive%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073551" name="08 - Water temp  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5862" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum>0%3DLevel 2 inactive%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073552" name="08 - Water temp  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5862" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073553" name="09 - Oil press  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5862" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum>0%3DLevel 1 inactive%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073554" name="09 - Oil press  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5862" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum>0%3DLevel 2 inactive%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073555" name="09 - Oil press  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5862" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073556" name="10 - Fuel level  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5863" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum>0%3DLevel 1 inactive%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B6%3DLevel 1 active%2C not confirmed yet%3B1%3DN%2FA</Enum>
+      </Point>
+      <Point id="1073557" name="10 - Fuel level  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5863" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum>0%3DLevel 2 inactive%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B6%3DLevel 2 active%2C not confirmed yet%3B1%3DN%2FA</Enum>
+      </Point>
+      <Point id="1073558" name="10 - Fuel level  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5863" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073559" name="11 - Load  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5908" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3DLevel 1 inactive%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073560" name="11 - Load  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5908" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum>0%3DLevel 2 inactive%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073561" name="11 - Load  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5908" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073562" name="12 - Engine Speed  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5908" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum>0%3DLevel 1 inactive%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073563" name="12 - Engine Speed  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5908" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum>0%3DLevel 2 inactive%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073564" name="12 - Engine Speed  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5908" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073565" name="13 - Fuel Temp  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5909" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3DLevel 1 inactive%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073566" name="13 - Fuel Temp  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5909" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum>0%3DLevel 2 inactive%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073567" name="13 - Fuel Temp  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5909" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073568" name="14 - CoolantTemp  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5909" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum>0%3DLevel 1 inactive%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073569" name="14 - CoolantTemp  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5909" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum>0%3DLevel 2 inactive%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073570" name="14 - CoolantTemp  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5909" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073571" name="15 - Boost Press  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5910" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3DLevel 1 inactive%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073572" name="15 - Boost Press  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5910" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum>0%3DLevel 2 inactive%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073573" name="15 - Boost Press  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5910" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073574" name="16 - Oil Temp  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5910" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum>0%3DLevel 1 inactive%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073575" name="16 - Oil Temp  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5910" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum>0%3DLevel 2 inactive%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073576" name="16 - Oil Temp  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5910" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073577" name="17 - Fuel Rate  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5911" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3DLevel 1 inactive%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073578" name="17 - Fuel Rate  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5911" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3DLevel 1 inactive%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073579" name="17 - Fuel Rate  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5911" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum>0%3DLevel 2 inactive%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073580" name="17 - Fuel Rate  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5911" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073581" name="18 - Intake Temp  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5911" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum>0%3DLevel 1 inactive%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073582" name="18 - Intake Temp  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5911" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum>0%3DLevel 2 inactive%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073583" name="18 - Intake Temp  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5911" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073584" name="19 - ElectrVolt  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5912" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3DLevel 1 inactive%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073585" name="19 - ElectrVolt  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5912" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum>0%3DLevel 2 inactive%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073586" name="19 - ElectrVolt  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5912" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073587" name="20 - Throttle  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5912" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum>0%3DLevel 1 inactive%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073588" name="20 - Throttle  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5912" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum>0%3DLevel 2 inactive%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073589" name="20 - Throttle  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5912" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073590" name="21 - Oil Press  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5913" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum>0%3DLevel 1 inactive%3B1%3DN%2FA%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073591" name="21 - Oil Press  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5913" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum>0%3DLevel 2 inactive%3B1%3DN%2FA%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073592" name="21 - Oil Press  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5913" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073593" name="22 - ECU  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5943" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum>0%3DLevel 1 inactive%3B1%3DN%2FA%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073594" name="22 - ECU  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5943" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum>0%3DLevel 2 inactive%3B1%3DN%2FA%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073595" name="22 - ECU  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5943" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073596" name="23 - SHBinCfgErr  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5947" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3DLevel 1 inactive%3B1%3DN%2FA%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073597" name="23 - SHBinCfgErr  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5947" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum>0%3DLevel 2 inactive%3B1%3DN%2FA%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073598" name="23 - SHBinCfgErr  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5947" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073599" name="25 - SHAinCfgErr  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5948" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum>0%3DLevel 1 inactive%3B1%3DN%2FA%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073600" name="25 - SHAinCfgErr  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5948" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum>0%3DLevel 2 inactive%3B1%3DN%2FA%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073601" name="25 - SHAinCfgErr  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5948" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073602" name="28 - ActCall Fail  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5950" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3DLevel 1 inactive%3B1%3DN%2FA%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073603" name="28 - ActCall Fail  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5950" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum>0%3DLevel 2 inactive%3B1%3DN%2FA%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073604" name="28 - ActCall Fail  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5950" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073605" name="30 - Wrong config  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5951" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3DLevel 1 inactive%3B1%3DN%2FA%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073606" name="30 - Wrong config  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5951" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum>0%3DLevel 2 inactive%3B1%3DN%2FA%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073607" name="30 - Wrong config  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5951" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073608" name="31 - ECUDiagBlocked  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5951" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum>0%3DLevel 1 inactive%3B1%3DN%2FA%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073609" name="31 - ECUDiagBlocked  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5951" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum>0%3DLevel 2 inactive%3B1%3DN%2FA%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073610" name="31 - ECUDiagBlocked  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5951" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073611" name="32 - System error  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5952" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3DLevel 1 inactive%3B1%3DN%2FA%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073612" name="32 - System error  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5952" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum>0%3DLevel 2 inactive%3B1%3DN%2FA%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073613" name="32 - System error  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5952" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073616" name="33 - RTCbatteryFlat  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5952" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum>0%3DLevel 1 inactive%3B1%3DN%2FA%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073614" name="33 - RTCbatteryFlat  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5952" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum>0%3DLevel 1 inactive%3B1%3DN%2FA%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073615" name="33 - RTCbatteryFlat  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5952" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum>0%3DLevel 1 inactive%3B1%3DN%2FA%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073617" name="33 - RTCbatteryFlat  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5952" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum>0%3DLevel 2 inactive%3B1%3DN%2FA%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073618" name="33 - RTCbatteryFlat  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5952" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073619" name="34 - UnauthorizCopy  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5953" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum>0%3DLevel 1 inactive%3B1%3DN%2FA%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073620" name="34 - UnauthorizCopy  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5953" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum>0%3DLevel 2 inactive%3B1%3DN%2FA%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073621" name="34 - UnauthorizCopy  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5953" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073622" name="35 - EarthFaultCurr  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5954" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3DLevel 1 inactive%3B1%3DN%2FA%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073623" name="35 - EarthFaultCurr  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5954" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum>0%3DLevel 2 inactive%3B1%3DN%2FA%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073624" name="35 - EarthFaultCurr  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5954" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073625" name="36 - Batt volt  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5954" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum>0%3DLevel 1 inactive%3B1%3DN%2FA%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073626" name="36 - Batt volt  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5954" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum>0%3DLevel 2 inactive%3B1%3DN%2FA%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073627" name="36 - Batt volt  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5954" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073628" name="37 - Gen I unbal  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5955" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3DLevel 1 inactive%3B1%3DN%2FA%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073629" name="37 - Gen I unbal  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5955" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum>0%3DLevel 2 inactive%3B1%3DN%2FA%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073630" name="37 - Gen I unbal  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5955" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073631" name="38 - Gen V unbal  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5955" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum>0%3DLevel 1 inactive%3B1%3DN%2FA%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073632" name="38 - Gen V unbal  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5955" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum>0%3DLevel 2 inactive%3B1%3DN%2FA%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073633" name="38 - Gen V unbal  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5955" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073634" name="40 - Bus V unbal  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5956" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum>0%3DLevel 1 inactive%3B1%3DN%2FA%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073635" name="40 - Bus V unbal  -  Level 2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5956" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum>0%3DLevel 2 inactive%3B1%3DN%2FA%3B2%3DLevel 2 active%2C confirmed%3B3%3DLevel 2 active%2C but blocked or delay still running%3B4%3DLevel 2 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 2 active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073636" name="40 - Bus V unbal  -  Sensor Failure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5956" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum>0%3DSensor failure not active%3B1%3DSensor failure active%2C confirmed%3B2%3DSensor failure previously active%2C not confirmed yet%3B3%3DSensor failure active%2C not confirmed yet</Enum>
+      </Point>
+      <Point id="1073637" name="41 - Dongle incomp  -  Level 1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5961" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3DLevel 1 inactive%3B1%3DN%2FA%3B2%3DLevel 1 active%2C confirmed%3B3%3DLevel 1 active%2C but blocked or delay still running%3B4%3DLevel 1 previously active%2C not confirmed yet%3B5%3DN%2FA%3B6%3DLevel 1 active%2C not confirmed yet</Enum>
+      </Point>
+   </Group>
+   <Group id="89054" name="Act. calls%2FSMS" uid="1053627">
+      <Point id="1053624" name="AcallCH1-Type">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3160" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DDISABLED%3B1%3DDATA-ANA%3B2%3DDATA-GSM%3B3%3DDATA-ISDN%3B4%3DDATA-CDMA%3B5%3DSMS-GSM%3B6%3DSMS-CDMA%3B7%3DIB-E-MAIL%3B8%3DIB-EML-SMS</Enum>
+      </Point>
+      <Point id="1053625" name="AcallCH2-Type">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3161" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DDISABLED%3B1%3DDATA-ANA%3B2%3DDATA-GSM%3B3%3DDATA-ISDN%3B4%3DDATA-CDMA%3B5%3DSMS-GSM%3B6%3DSMS-CDMA%3B7%3DIB-E-MAIL%3B8%3DIB-EML-SMS</Enum>
+      </Point>
+      <Point id="1053626" name="AcallCH3-Type">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3162" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DDISABLED%3B1%3DDATA-ANA%3B2%3DDATA-GSM%3B3%3DDATA-ISDN%3B4%3DDATA-CDMA%3B5%3DSMS-GSM%3B6%3DSMS-CDMA%3B7%3DIB-E-MAIL%3B8%3DIB-EML-SMS</Enum>
+      </Point>
+   </Group>
+   <Group id="88460" name="AMF settings" uid="1045246">
+      <Point id="1045237" name="BreakerOverlap" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3120" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045238" name="EmergStart del" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3114" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045239" name="FwRet break" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3115" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045240" name="Mains ret del" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3117" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045241" name="MCB close del" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3116" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045242" name="MCB opens on" unit="">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3118" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DMAINSFAIL%3B1%3DGEN RUNNING</Enum>
+      </Point>
+      <Point id="1045243" name="RetFromIsland" unit="">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3122" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DMANUAL%3B1%3DAUTO</Enum>
+      </Point>
+      <Point id="1045244" name="ReturnTo mains" unit="">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3121" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DDISABLED%3B1%3DENABLED</Enum>
+      </Point>
+      <Point id="1045245" name="ReturnWithIntr" unit="">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3119" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DDISABLED%3B1%3DENABLED</Enum>
+      </Point>
+   </Group>
+   <Group id="88461" name="Analog CU" uid="1045706">
+      <Point id="1045246" name="CPU temp" unit="">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="14" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045247" name="D " unit="">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="15" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045251" name="Eng Water temp">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="17" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045704" name="Fuel level %28Fuel Rate%3F%29">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="18" type="Holding"/>
+         <Calculate decimals="1"/>
+         <Enum/>
+      </Point>
+      <Point id="1045249" name="Oil pressure" unit="">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="16" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045705" name="Sec Wtemp">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="19" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045250" name="Ubat" unit="">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="13" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="88462" name="Analog protect" uid="1053631">
+      <Point id="1045252" name="Batt volt del" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3432" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045253" name="Batt%7BV" unit="">
+         <Type>SetValue</Type>
+         <Address format="S16" index="3273" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045254" name="Batt%7DV" unit="">
+         <Type>SetValue</Type>
+         <Address format="S16" index="3272" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1053630" name="Bus V unb del" unit="s">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="3436" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053627" name="Bus V unbal" unit="%25">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="3276" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="88464" name="Basic Settings" uid="1053644">
+      <Point id="1045271" name="ControllerMode">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3027" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DOFF%3B1%3DMAN%3B2%3DAUT</Enum>
+      </Point>
+      <Point id="1053643" name="ConvCoefPulse" unit="%2FX">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="3725" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045272" name="CT ratio prim" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3011" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045273" name="CT ratio sec" unit="">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3012" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3D%2F5A%3B1%3D%2F1A</Enum>
+      </Point>
+      <Point id="1045274" name="DispBaklightTO" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3030" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045275" name="DispBklStrtOff" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="3642" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DDISABLED%3B1%3DENABLED</Enum>
+      </Point>
+      <Point id="1045276" name="FixVoltProtSel" unit="">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3023" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DPHASE-NEUTRAL%3B1%3DPHASE-PHASE</Enum>
+      </Point>
+      <Point id="1045277" name="FltRes GoToMAN" unit="">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3028" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DDISABLED%3B1%3DENABLED</Enum>
+      </Point>
+      <Point id="1045278" name="Gear teeth" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3025" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045279" name="GenNomV" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3019" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045280" name="GenNomVph-ph" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3020" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045281" name="Im3%2FErFlCurCTp" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3013" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045282" name="Im3%2FErFlCurCTs" unit="">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3014" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3D%2F5A%3B1%3D%2F1A</Enum>
+      </Point>
+      <Point id="1045283" name="Local buttons" unit="">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3029" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DPANEL%3B1%3DEXTBUTTONS%3B2%3DBOTH</Enum>
+      </Point>
+      <Point id="1045284" name="MainsNomV" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3021" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045285" name="MainsNomVph-ph" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3022" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045286" name="Nomin current" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3010" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045287" name="Nomin power" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3009" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045288" name="Nominal freq" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3024" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045289" name="Nominal RPM" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3026" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045290" name="Vg InpRangeSel" unit="">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3016" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3D277 V%3B1%3D120 V</Enum>
+      </Point>
+      <Point id="1045291" name="Vm InpRangeSel" unit="">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3018" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3D277 V%3B1%3D120 V</Enum>
+      </Point>
+      <Point id="1045292" name="Vm VT ratio" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3017" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045293" name="VT ratio" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3015" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="88465" name="Binary inputs %28IGS-PTM%29" uid="1045326">
+      <Point id="1045294" name="BIN-1 1" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="4" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045295" name="BIN-1 2" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="4" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045296" name="BIN-1 3" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="4" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045297" name="BIN-1 4" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="4" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045298" name="BIN-1 5" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="4" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045299" name="BIN-1 6" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="4" type="Holding"/>
+         <Calculate mask="32"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045300" name="BIN-1 7" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="4" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045301" name="BIN-1 8" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="4" type="Holding"/>
+         <Calculate mask="128"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045302" name="BIN-2 1" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045303" name="BIN-2 2" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045304" name="BIN-2 3" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045305" name="BIN-2 4" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045306" name="BIN-2 5" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045307" name="BIN-2 6" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5" type="Holding"/>
+         <Calculate mask="32"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045308" name="BIN-2 7" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045309" name="BIN-2 8" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="5" type="Holding"/>
+         <Calculate mask="128"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045310" name="BIN-3 1" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="6" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045311" name="BIN-3 2" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="6" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045312" name="BIN-3 3" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="6" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045313" name="BIN-3 4" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="6" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045314" name="BIN-3 5" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="6" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045315" name="BIN-3 6" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="6" type="Holding"/>
+         <Calculate mask="32"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045316" name="BIN-3 7" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="6" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045317" name="BIN-3 8" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="6" type="Holding"/>
+         <Calculate mask="128"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045318" name="BIN-4 1" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="7" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045319" name="BIN-4 2" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="7" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045320" name="BIN-4 3" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="7" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045321" name="BIN-4 4" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="7" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045322" name="BIN-4 5" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="7" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045323" name="BIN-4 6" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="7" type="Holding"/>
+         <Calculate mask="32"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045324" name="BIN-4 7" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="7" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045325" name="BIN-4 8" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="7" type="Holding"/>
+         <Calculate mask="128"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+   </Group>
+   <Group id="88466" name="Binary Inputs CU" uid="1049612">
+      <Point id="1049611" name="Comm. SD">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="3" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum/>
+      </Point>
+      <Point id="1045332" name="Emergency stop">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="3" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045326" name="GCB feedback">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="3" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045327" name="Not Used BI2">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="3" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045330" name="Not Used BI3  ">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="3" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045333" name="Not used BI5">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="3" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum>0%3Dother%3B1%3Doff</Enum>
+      </Point>
+      <Point id="1045334" name="Not Used BI6">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="3" type="Holding"/>
+         <Calculate mask="32"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045336" name="Not used BI8">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="3" type="Holding"/>
+         <Calculate mask="128"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045337" name="Not used BI9">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="3" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045331" name="Sys start%2Fstop">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="3" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum>0%3Dstop%3B1%3Dstart</Enum>
+      </Point>
+   </Group>
+   <Group id="88467" name="Binary outputs %28IGS-PTM%29" uid="1045370">
+      <Point id="1045338" name="BOUT-1 1" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="359" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045339" name="BOUT-1 2" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="359" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045340" name="BOUT-1 3" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="359" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045341" name="BOUT-1 4" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="359" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045342" name="BOUT-1 5" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="359" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045343" name="BOUT-1 6" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="359" type="Holding"/>
+         <Calculate mask="32"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045344" name="BOUT-1 7" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="359" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045345" name="BOUT-1 8" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="359" type="Holding"/>
+         <Calculate mask="128"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045346" name="BOUT-2 1" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="360" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045347" name="BOUT-2 2" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="360" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045348" name="BOUT-2 3" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="360" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045349" name="BOUT-2 4" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="360" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045350" name="BOUT-2 5" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="360" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045351" name="BOUT-2 6" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="360" type="Holding"/>
+         <Calculate mask="32"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045352" name="BOUT-2 7" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="360" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045353" name="BOUT-2 8" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="360" type="Holding"/>
+         <Calculate mask="128"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045354" name="BOUT-3 1" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="361" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045355" name="BOUT-3 2" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="361" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045356" name="BOUT-3 3" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="361" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045357" name="BOUT-3 4" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="361" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045358" name="BOUT-3 5" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="361" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045359" name="BOUT-3 6" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="361" type="Holding"/>
+         <Calculate mask="32"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045360" name="BOUT-3 7" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="361" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045361" name="BOUT-3 8" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="361" type="Holding"/>
+         <Calculate mask="128"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045362" name="BOUT-4 1" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="362" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045363" name="BOUT-4 2" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="362" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045364" name="BOUT-4 3" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="362" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045365" name="BOUT-4 4" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="362" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045366" name="BOUT-4 5" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="362" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045367" name="BOUT-4 6" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="362" type="Holding"/>
+         <Calculate mask="32"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045368" name="BOUT-4 7" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="362" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045369" name="BOUT-4 8" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="362" type="Holding"/>
+         <Calculate mask="128"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+   </Group>
+   <Group id="88468" name="BOUT CU" uid="1045382">
+      <Point id="1045377" name="Alarm">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="12" type="Holding"/>
+         <Calculate mask="32"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045373" name="Fuel solenoid">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="12" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045374" name="GCB close%2Fopen">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="12" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045378" name="Gen Loaded">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="12" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045376" name="Idle%2FNominal">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="12" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045379" name="InMainsParal">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="12" type="Holding"/>
+         <Calculate mask="128"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045375" name="NT-BOUT 4">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="12" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045381" name="Starter" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="12" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+   </Group>
+   <Group id="89047" name="Comms settings" uid="1053647">
+      <Point id="1053589" name="CAN2emptDetect">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3031" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DDISABLED%3B1%3DENABLED</Enum>
+      </Point>
+      <Point id="1053646" name="ECU diag ">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3219" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DDISABLED%3B1%3DENABLED</Enum>
+      </Point>
+      <Point id="1053645" name="Gen-set name">
+         <Type>ShowValue</Type>
+         <Address format="String" index="3001" multiple="0" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053644" name="LB%2FUART Log">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3748" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DDISABLED%3B1%3DENABLED</Enum>
+      </Point>
+      <Point id="1053642" name="SHxOcol Detect">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3660" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DDISABLED%3B1%3DENABLED</Enum>
+      </Point>
+   </Group>
+   <Group id="89055" name="Date%2FTime" uid="1053641">
+      <Point id="1053640" name="%23SummerTimeMod">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3601" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DDISABLED%3B1%3DWINTER%3B2%3DSUMMER%3B3%3DWINTER-S%3B 4%3DSUMMER-S</Enum>
+      </Point>
+      <Point id="1053632" name="Time stamp act">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="3575" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DDISABLED%3B1%3DENGINE RUNNING%3B2%3DALWAYS</Enum>
+      </Point>
+   </Group>
+   <Group id="88469" name="ECU" uid="1053518">
+      <Point id="1053485" name="Boost Press" unit="bar">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="109" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045383" name="CoolantTemp" unit="%C2%B0C">
+         <Type>SetValue</Type>
+         <Address format="S16" index="106" type="Holding"/>
+         <Calculate max="500.0000" min="0.0000"/>
+         <Enum/>
+      </Point>
+      <Point id="1053491" name="ECU-AIN 12">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="115" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053492" name="ECU-AIN 13">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="116" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053493" name="ECU-AIN 14">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="117" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053494" name="ECU-AIN 15">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="118" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053495" name="ECU-AIN 16">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="119" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053499" name="ECU-BIN 1">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="120" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum/>
+      </Point>
+      <Point id="1053509" name="ECU-BIN 10">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="121" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum/>
+      </Point>
+      <Point id="1053510" name="ECU-BIN 11">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="121" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum/>
+      </Point>
+      <Point id="1053512" name="ECU-BIN 12">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="121" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum/>
+      </Point>
+      <Point id="1053511" name="ECU-BIN 13">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="121" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum/>
+      </Point>
+      <Point id="1053513" name="ECU-BIN 14">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="121" type="Holding"/>
+         <Calculate mask="32"/>
+         <Enum/>
+      </Point>
+      <Point id="1053514" name="ECU-BIN 15">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="0" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum/>
+      </Point>
+      <Point id="1053515" name="ECU-BIN 16">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="121" type="Holding"/>
+         <Calculate mask="128"/>
+         <Enum/>
+      </Point>
+      <Point id="1053500" name="ECU-BIN 2">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="120" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum/>
+      </Point>
+      <Point id="1053501" name="ECU-BIN 3">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="120" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum/>
+      </Point>
+      <Point id="1053502" name="ECU-BIN 4">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="120" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum/>
+      </Point>
+      <Point id="1053503" name="ECU-BIN 5">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="120" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum/>
+      </Point>
+      <Point id="1053504" name="ECU-BIN 6">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="120" type="Holding"/>
+         <Calculate mask="32"/>
+         <Enum/>
+      </Point>
+      <Point id="1053505" name="ECU-BIN 7">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="120" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum/>
+      </Point>
+      <Point id="1053506" name="ECU-BIN 8">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="120" type="Holding"/>
+         <Calculate mask="128"/>
+         <Enum/>
+      </Point>
+      <Point id="1053508" name="ECU-BIN 9">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="121" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum/>
+      </Point>
+      <Point id="1053489" name="ElectrVolt" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="113" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053516" name="EngHours" unit="h">
+         <Type>ShowValue</Type>
+         <Address format="S32" index="124" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053482" name="Engine Speed" unit="RPM">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="104" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053487" name="Fuel Rate" unit="L%2Fh">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="111" type="Holding"/>
+         <Calculate max="500.0000" min="0.0000"/>
+         <Enum/>
+      </Point>
+      <Point id="1045386" name="Fuel Temp" unit="%C2%B0C">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="107" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053517" name="FuelUsed" unit="L">
+         <Type>ShowValue</Type>
+         <Address format="S32" index="126" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053486" name="Intake Temp" unit="%C2%B0C">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="110" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053483" name="Load" unit="%25">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="105" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053490" name="Oil Press" unit="bar">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="114" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053484" name="Oil Temp" unit="%C2%B0C">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="108" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053488" name="Throttle" unit="%25">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="112" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="89046" name="ECU diag" uid="1053589">
+      <Point id="1053586" name="ECU FC">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="177" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053587" name="ECU FMI">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="179" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053588" name="ECU OC">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="180" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="88470" name="Engine params" uid="1045416">
+      <Point id="1045388" name="AfterCoolTime" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3049" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045389" name="Bin selector 1" unit="">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3220" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DOFF%3B1%3DON</Enum>
+      </Point>
+      <Point id="1045390" name="Bin selector 2" unit="">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3221" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DOFF%3B1%3DON</Enum>
+      </Point>
+      <Point id="1045391" name="Bin selector 3" unit="">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3222" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DOFF%3B1%3DON</Enum>
+      </Point>
+      <Point id="1045392" name="Bin selector 4" unit="">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3223" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DOFF%3B1%3DON</Enum>
+      </Point>
+      <Point id="1045393" name="CoolDnAfterBOC" unit="">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3640" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DSTOP%3B1%3DINFIN COOLING</Enum>
+      </Point>
+      <Point id="1045394" name="Cooldown optim" unit="">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3048" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DDISABLED%3B1%3DENABLED</Enum>
+      </Point>
+      <Point id="1045395" name="Cooling speed" unit="">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3046" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DIDLE%3B1%3DNOMINAL</Enum>
+      </Point>
+      <Point id="1045396" name="Cooling time" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3047" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045397" name="Crank attempts" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3039" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045398" name="CrnkFail pause" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3038" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045399" name="D  function" unit="">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3054" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DDISABLED%3B1%3DCHRGFAIL%3B2%3DENABLED</Enum>
+      </Point>
+      <Point id="1045400" name="Fuel solenoid" unit="">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3052" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DDIESEL ENGINE%3B1%3DGAS ENGINE</Enum>
+      </Point>
+      <Point id="1045401" name="FuelSol offset" unit="">
+         <Type>SetValue</Type>
+         <Address format="S16" index="3053" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045402" name="Idle time" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3040" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045403" name="Max stab time" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3042" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045404" name="Max warm time" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3045" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045405" name="MaxCrank time" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3037" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045406" name="Min stab time" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3041" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045407" name="PrelubrPause" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3036" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045408" name="PrelubrTime" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3035" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045409" name="Prestart time" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3034" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045410" name="SDVentil time" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3051" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045411" name="Starting POil" unit="">
+         <Type>SetValue</Type>
+         <Address format="S16" index="3033" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045412" name="Starting RPM" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3032" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045413" name="Stop time" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3050" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045414" name="Warming load" unit="">
+         <Type>SetValue</Type>
+         <Address format="S16" index="3043" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045415" name="Warming temp" unit="">
+         <Type>SetValue</Type>
+         <Address format="S16" index="3044" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="88471" name="Engine protect" uid="1045428">
+      <Point id="1045416" name="BinInp delay 1">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3268" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045417" name="BinInp delay 2">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3269" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045418" name="BinInp delay 3">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3270" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045419" name="ForceBlock1Del">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3262" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045420" name="ForceBlock2Del">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3263" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045421" name="ForceBlock3Del">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3264" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045422" name="Horn timeout" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3055" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045423" name="Overspeed" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3056" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045424" name="ResetActAlarms" unit="">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3224" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DDISABLED%3B1%3DENABLED</Enum>
+      </Point>
+      <Point id="1045425" name="RunOnlyBlkDel1">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3265" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045426" name="RunOnlyBlkDel2">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3266" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045427" name="RunOnlyBlkDel3">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3267" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="88472" name="Engine values" uid="1048708">
+      <Point id="1045428" name="RPM">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="315" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1048705" name="T Cyl aver" unit="%C2%B0C">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="316" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1048706" name="T Cyl max" unit="%C2%B0C">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="317" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1048707" name="T Cyl min" unit="%C2%B0C">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="318" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="88473" name="Gener protect" uid="1053630">
+      <Point id="1045432" name="2EthFltCur del" unit="s">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3809" type="Holding"/>
+         <Calculate decimals="1"/>
+         <Enum/>
+      </Point>
+      <Point id="1045429" name="2Inom del" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3096" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045430" name="2POverldStEvDel" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3092" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1053623" name="BusMeasError">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3101" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DDISABLED%3B1%3DENABLED</Enum>
+      </Point>
+      <Point id="1053628" name="EarthFaultCurr">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="3277" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053629" name="EthFltCurr del" unit="s">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="3435" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045433" name="Gen f del" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3104" type="Holding"/>
+         <Calculate decimals="2" scaling="100.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045434" name="Gen I unb del" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3434" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045435" name="Gen I unbal" unit="">
+         <Type>SetValue</Type>
+         <Address format="S16" index="3275" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045436" name="Gen V del" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3100" type="Holding"/>
+         <Calculate decimals="2" scaling="100.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045437" name="Gen V unb del" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3433" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045438" name="Gen V unbal" unit="">
+         <Type>SetValue</Type>
+         <Address format="S16" index="3274" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045439" name="Gen %7Bf" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3103" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045440" name="Gen %7BV BOC" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3099" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045441" name="Gen %7Df" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3102" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045442" name="Gen %7DV BOC" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3097" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045443" name="Gen %7DV Sd" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3098" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045444" name="Ishort" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3094" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045445" name="Ishort del" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3095" type="Holding"/>
+         <Calculate decimals="2" scaling="100.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045446" name="Min power PtM" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3093" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045431" name="Nom EthFltCurr" unit="A">
+         <Type>SetValue</Type>
+         <Address format="S16" index="3808" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045447" name="OverldStrtEval" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3091" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045448" name="Reverse power" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3746" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045449" name="ReversePwr del" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3747" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="88474" name="Gener values" uid="1045481">
+      <Point id="1045450" name="Act power" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="264" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045451" name="Act pwr L1" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="266" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045452" name="Act pwr L2" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="267" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045453" name="Act pwr L3" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="268" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045454" name="Angle" unit="">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="304" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045455" name="Appar pwr" unit="kVA">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="274" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045456" name="Appar pwr L1" unit="kVA">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="275" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045457" name="Appar pwr L2" unit="kVA">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="276" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045458" name="Appar pwr L3" unit="kVA">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="277" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045459" name="Gen curr L1" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="258" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045460" name="Gen curr L2" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="259" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045461" name="Gen curr L3" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="260" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045462" name="Gen freq" unit="Hz">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="256" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045463" name="Gen I unbal" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="282" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045464" name="Gen V" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="252" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045465" name="Gen V L1-L2" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="253" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045466" name="Gen V L1-N" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="249" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045467" name="Gen V L2-L3" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="254" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045468" name="Gen V L2-N" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="250" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045469" name="Gen V L3-L1" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="255" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045470" name="Gen V L3-N" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="251" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045471" name="Gen V unbal" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="281" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045472" name="Pwr factor" unit="PF">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="261" type="Holding"/>
+         <Calculate decimals="2" scaling="100.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045473" name="Pwr factor L1" unit="PF">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="278" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045474" name="Pwr factor L2" unit="PF">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="279" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045475" name="Pwr factor L3" unit="PF">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="280" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045476" name="React power" unit="kVAr">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="269" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045477" name="React pwr L1" unit="kVAr">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="271" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045478" name="React pwr L2" unit="kVAr">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="272" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045479" name="React pwr L3" unit="kVAr">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="273" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045480" name="Slip freq" unit="">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="303" type="Holding"/>
+         <Calculate decimals="2" scaling="100.0"/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="88475" name="Info" uid="1045493">
+      <Point id="1045481" name="Application" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="160" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045482" name="Breaker state" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="164" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum>0%3DInit%3B1%3DBrksOff%3B2%3DIslOper%3B3%3DMainsOper%3B4%3DParalOper%3B5%3DRevSync%3B6%3DSynchro%3B7%3DMainsFlt%3B8%3DValidFlt%3B9%3DMainsRet%3B10%3DMultIslOp%3B11%3DMultParOp%3B12%3DEmergMan</Enum>
+      </Point>
+      <Point id="1045483" name="CAN16" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="171" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045484" name="CAN32" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="172" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045485" name="Controller mode">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="168" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum>0%3DOFF%3B1%3DMAN%3B2%3DAUT</Enum>
+      </Point>
+      <Point id="1045486" name="ECU DiagSource" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="176" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum>0%3DNONE%3B1%3DJ1939-DM1%3B2%3DJ1939-KWP%3B3%3DJ1587-DTC%3B4%3DMODBUS</Enum>
+      </Point>
+      <Point id="1045487" name="Engine state" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="163" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum>0%3DInit%3B1%3DReady%3B2%3DNotReady%3B3%3DPrestart%3B4%3DCranking%3B5%3DPause%3B6%3DStarting%3B7%3DRunning%3B8%3DLoaded%3B9%3DSoft%3Dunld%3B10%3DCooling%3B11%3DStop%3B12%3DShutdown%3B13%3DVentil%3B14%3DEmergMan%3B15%3DCooldown%3B16%3DOffload%3B17%3DSoft%3Dload%3B18%3DWaitStop%3B19%3DWarming%3B20%3DSDVentil</Enum>
+      </Point>
+      <Point id="1045488" name="PasswordDecode" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="161" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045489" name="SW branch" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="159" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045490" name="SW version" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="158" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045491" name="Timer text" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="174" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum>0%3DNo Timer%3B1%3DPrestart%3B2%3DCranking%3B3%3DIdle run%3B4%3DCooling%3B5%3DStop time%3B6%3DAfterCool%3B7%3DPause%3B8%3DMinStabTO%3B9%3DMaxStabTO%3B10%3DWait stop%3B11%3DWarming%3B12%3DMCB close%3B13%3DFwRet brk%3B14%3DSyncTOut%3B15%3DBrkOvrlap%3B16%3DGCB open%3B17%3DSyncStart%3B18%3DRetTransf%3B19%3DValidFlt%3B20%3DSoft load%3B21%3DSoft unld%3B22%3DVentilGas%3B23%3DSystStart%3B24%3DSystStop%3B25%3DNextStart%3B26%3DNextStop%3B27%3DLdShedChg%3B28%3DLdRecChg%3B29%3DSyncEnab%3B30%3DOfL stop</Enum>
+      </Point>
+      <Point id="1045492" name="Timer val" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="175" type="Holding"/>
+         <Calculate decimals="0"/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="88476" name="Load shedding" uid="1045500">
+      <Point id="1045493" name="AutoLd recon" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="3155" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DDISABLED%3B1%3DENABLED</Enum>
+      </Point>
+      <Point id="1045494" name="Ld recon delay">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3156" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045495" name="Ld recon level" unit="">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="3159" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045496" name="Ld shed active" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="3641" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DDISABLE%3B1%3DISLAND ONLY%3B2%3DISL TRIP PARAL%3B3%3DALL THE TIME</Enum>
+      </Point>
+      <Point id="1045497" name="Ld shed delay" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="3158" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045498" name="Ld shed level" unit="">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="3157" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045499" name="StatLdShed" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="320" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DNo LoadShed%3B1%3DLdShed S1%3B2%3DLdShed S2%3B3%3DLdShed S3</Enum>
+      </Point>
+   </Group>
+   <Group id="88477" name="Log Bout" uid="1048705">
+      <Point id="1045500" name="Log Bout 1-Alarm">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="130" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045501" name="Log Bout 1-CommonAlLev1">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="130" type="Holding"/>
+         <Calculate mask="32"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045502" name="Log Bout 1-CommonAlLev2" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="130" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045503" name="Log Bout 1-Cooling pump" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="130" type="Holding"/>
+         <Calculate mask="128"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045504" name="Log Bout 1-Fuel Solenoid" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="130" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045505" name="Log Bout 1-GCB close%2Fopen" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="130" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045506" name="Log Bout 1-GCB OFF coil" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="130" type="Holding"/>
+         <Calculate mask="1024"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045507" name="Log Bout 1-GCB ON coil" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="130" type="Holding"/>
+         <Calculate mask="512"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045508" name="Log Bout 1-GCB UV coil" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="130" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045509" name="Log Bout 1-Horn" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="130" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045510" name="Log Bout 1-MCB close%2Fopen" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="130" type="Holding"/>
+         <Calculate mask="4096"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045511" name="Log Bout 1-MCB OFF coil" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="130" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045512" name="Log Bout 1-MCB ON coil" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="130" type="Holding"/>
+         <Calculate mask="8192"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045513" name="Log Bout 1-MCB UV coil" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="130" type="Holding"/>
+         <Calculate mask="32768"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045514" name="Log Bout 1-Prestart" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="130" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045515" name="Log Bout 1-Starter" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="130" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045516" name="Log Bout 2-AllAvailGS run" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="131" type="Holding"/>
+         <Calculate mask="128"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045517" name="Log Bout 2-AVR dn" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="131" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045518" name="Log Bout 2-AVR up" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="131" type="Holding"/>
+         <Calculate mask="1024"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045519" name="Log Bout 2-MINT mode" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="131" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045520" name="Log Bout 2-Speed dn" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="131" type="Holding"/>
+         <Calculate mask="512"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045521" name="Log Bout 2-Speed up" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="131" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045522" name="Log Bout 2-SPI mode" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="131" type="Holding"/>
+         <Calculate mask="4096"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045523" name="Log Bout 2-SPtM mode" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="131" type="Holding"/>
+         <Calculate mask="8192"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045524" name="Log Bout 2-Stop pulse" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="131" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045525" name="Log Bout 2-Stop solenoid" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="131" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045526" name="Log Bout 2-Sys res 1 OK" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="131" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045527" name="Log Bout 2-Sys res 2 OK" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="131" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045528" name="Log Bout 2-Sys res 3 OK" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="131" type="Holding"/>
+         <Calculate mask="32"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045529" name="Log Bout 2-Sys res 4 OK" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="131" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045530" name="Log Bout 2-Sys res OK" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="131" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045531" name="Log Bout 2-Vgen %7B%7D" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="131" type="Holding"/>
+         <Calculate mask="32768"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045532" name="Log Bout 3-Common Al" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="132" type="Holding"/>
+         <Calculate mask="8192"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045533" name="Log Bout 3-Common BOC" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="132" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045534" name="Log Bout 3-Common Fls" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="132" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045535" name="Log Bout 3-Common Hst" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="132" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045536" name="Log Bout 3-Common MP" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="132" type="Holding"/>
+         <Calculate mask="4096"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045537" name="Log Bout 3-Common OfL" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="132" type="Holding"/>
+         <Calculate mask="1024"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045538" name="Log Bout 3-Common Sd" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="132" type="Holding"/>
+         <Calculate mask="32"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045539" name="Log Bout 3-Common SdOvr" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="132" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045540" name="Log Bout 3-Common Stp" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="132" type="Holding"/>
+         <Calculate mask="128"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045541" name="Log Bout 3-Common Wrn" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="132" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045542" name="Log Bout 3-CommonActLev1" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="132" type="Holding"/>
+         <Calculate mask="32768"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045543" name="Log Bout 3-Overcurrent" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="132" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045544" name="Log Bout 3-VectorShiftAct" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="132" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045545" name="Log Bout 3-VectorShiftTrp" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="132" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045546" name="Log Bout 3-Vmains %7B%7D" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="132" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045547" name="Log Bout 4-Alarm flashing" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="133" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045548" name="Log Bout 4-CommonActLev2" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="133" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045549" name="Log Bout 4-FltResButnEcho" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="133" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045550" name="Log Bout 4-GCB status" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="133" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045551" name="Log Bout 4-GCBBtnEcho" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="133" type="Holding"/>
+         <Calculate mask="4096"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045552" name="Log Bout 4-Horn flashing" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="133" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045553" name="Log Bout 4-HornBtnEcho" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="133" type="Holding"/>
+         <Calculate mask="512"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045554" name="Log Bout 4-Idle%2FNominal" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="133" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045555" name="Log Bout 4-Ignition" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="133" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045556" name="Log Bout 4-MCB status" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="133" type="Holding"/>
+         <Calculate mask="32768"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045557" name="Log Bout 4-MCBBtnEcho" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="133" type="Holding"/>
+         <Calculate mask="8192"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045558" name="Log Bout 4-Prelubr pump" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="133" type="Holding"/>
+         <Calculate mask="128"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045559" name="Log Bout 4-StartBtnEcho" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="133" type="Holding"/>
+         <Calculate mask="1024"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045560" name="Log Bout 4-StopBtnEcho" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="133" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045561" name="Log Bout 4-Ventilation" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="133" type="Holding"/>
+         <Calculate mask="32"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1048699" name="Log Bout 5-BusParams OK">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="134" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum/>
+      </Point>
+      <Point id="1045562" name="Log Bout 5-CtrlHeartBeat" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="134" type="Holding"/>
+         <Calculate mask="8192"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045563" name="Log Bout 5-CtrlHtBeat FD" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="134" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1048701" name="Log Bout 5-Derating 1 act">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="134" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum/>
+      </Point>
+      <Point id="1048702" name="Log Bout 5-Derating 2 act ">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="134" type="Holding"/>
+         <Calculate mask="128"/>
+         <Enum/>
+      </Point>
+      <Point id="1045564" name="Log Bout 5-ECU comm error" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="134" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045565" name="Log Bout 5-ECU PwrRelay" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="134" type="Holding"/>
+         <Calculate mask="1024"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1048703" name="Log Bout 5-EnginesSwapped">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="134" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum/>
+      </Point>
+      <Point id="1045566" name="Log Bout 5-GenParams OK">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="134" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045567" name="Log Bout 5-In synchronism" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="134" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1048700" name="Log Bout 5-InMainsParal">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="134" type="Holding"/>
+         <Calculate mask="32"/>
+         <Enum/>
+      </Point>
+      <Point id="1045568" name="Log Bout 5-kWh pulse" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="134" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1048704" name="Log Bout 5-LdShed stage 1">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="134" type="Holding"/>
+         <Calculate mask="32768"/>
+         <Enum/>
+      </Point>
+      <Point id="1045569" name="Log Bout 5-LdShed stage1" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="134" type="Holding"/>
+         <Calculate mask="32768"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045571" name="Log Bout 5-Neutral CB C%2FO" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="134" type="Holding"/>
+         <Calculate mask="512"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045572" name="Log Bout 5-PeriphCommErr" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="134" type="Holding"/>
+         <Calculate mask="4096"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045570" name="Log Bout 5-Reserved">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="134" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045581" name="Log Bout 6-Aut mode">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="135" type="Holding"/>
+         <Calculate mask="1024"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045574" name="Log Bout 6-Gen-set active">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="135" type="Holding"/>
+         <Calculate mask="32768"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045575" name="Log Bout 6-LdShed stage2" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="135" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045576" name="Log Bout 6-LdShed stage3" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="135" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045577" name="Log Bout 6-Man mode" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="135" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045578" name="Log Bout 6-Off mode" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="135" type="Holding"/>
+         <Calculate mask="128"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045579" name="Log Bout 6-Ready for load">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="135" type="Holding"/>
+         <Calculate mask="8192"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045580" name="Log Bout 6-Reserved">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="135" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045573" name="Log Bout 6-Sem mode">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="135" type="Holding"/>
+         <Calculate mask="512"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1048698" name="Log Bout 6-SystReady">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="135" type="Holding"/>
+         <Calculate mask="4096"/>
+         <Enum/>
+      </Point>
+      <Point id="1045582" name="Log Bout 6-TimerAct 1-4" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="135" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045583" name="Log Bout 6-TimerAct 13-16" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="135" type="Holding"/>
+         <Calculate mask="32"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045584" name="Log Bout 6-TimerAct 5-8" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="135" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045585" name="Log Bout 6-TimerAct 9-12" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="135" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045586" name="Log Bout 6-TimerActiveCom" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="135" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045587" name="Log Bout 7-Cooling">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="136" type="Holding"/>
+         <Calculate mask="8192"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045588" name="Log Bout 7-Cranking">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="136" type="Holding"/>
+         <Calculate mask="32768"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045589" name="Log Bout 7-CrankProcedure">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="136" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045590" name="Log Bout 7-ForwardSyncro">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="136" type="Holding"/>
+         <Calculate mask="128"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045591" name="Log Bout 7-Idle run">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="136" type="Holding"/>
+         <Calculate mask="32"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045592" name="Log Bout 7-Loaded">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="136" type="Holding"/>
+         <Calculate mask="2048"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045593" name="Log Bout 7-Not ready">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="136" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045594" name="Log Bout 7-Operational">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="136" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045595" name="Log Bout 7-Ready">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="136" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045596" name="Log Bout 7-Reserved">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="136" type="Holding"/>
+         <Calculate mask="256"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045597" name="Log Bout 7-Running">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="136" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045598" name="Log Bout 7-Soft load">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="136" type="Holding"/>
+         <Calculate mask="1024"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045599" name="Log Bout 7-Soft unld">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="136" type="Holding"/>
+         <Calculate mask="4096"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045600" name="Log Bout 7-Starting">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="136" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045601" name="Log Bout 7-Stopping">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="136" type="Holding"/>
+         <Calculate mask="16384"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045602" name="Log Bout 7-Warming">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="136" type="Holding"/>
+         <Calculate mask="512"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+   </Group>
+   <Group id="88478" name="Log Bout RC" uid="1045611">
+      <Point id="1045603" name="RemoteControl1" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="157" type="Holding"/>
+         <Calculate mask="1"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045604" name="RemoteControl2" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="157" type="Holding"/>
+         <Calculate mask="2"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045605" name="RemoteControl3" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="157" type="Holding"/>
+         <Calculate mask="4"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045606" name="RemoteControl4" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="157" type="Holding"/>
+         <Calculate mask="8"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045607" name="RemoteControl5" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="157" type="Holding"/>
+         <Calculate mask="16"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045608" name="RemoteControl6" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="157" type="Holding"/>
+         <Calculate mask="32"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045609" name="RemoteControl7" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="157" type="Holding"/>
+         <Calculate mask="64"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+      <Point id="1045610" name="RemoteControl8" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="157" type="Holding"/>
+         <Calculate mask="128"/>
+         <Enum>0%3Doff%3B1%3Don</Enum>
+      </Point>
+   </Group>
+   <Group id="88479" name="Mains protect" uid="1045622">
+      <Point id="1045611" name="Mains f del" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3110" type="Holding"/>
+         <Calculate decimals="2" scaling="100.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045612" name="Mains V del" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3107" type="Holding"/>
+         <Calculate decimals="2" scaling="100.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045613" name="Mains V unbal" unit="">
+         <Type>SetValue</Type>
+         <Address format="S16" index="3276" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045614" name="Mains Vunb del" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3436" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045615" name="Mains %7Bf" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3109" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045616" name="Mains %7BV MP" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3106" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045617" name="Mains %7Df" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3108" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045618" name="Mains %7DV MP" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3105" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045619" name="VectorS CB sel" unit="">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3113" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DMCB%3B1%3DGCB</Enum>
+      </Point>
+      <Point id="1045620" name="VectorS limit" unit="">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3111" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045621" name="VectorS prot" unit="">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3112" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DDISABLED%3B1%3DPARALLEL ONLY%3B2%3DENABLED</Enum>
+      </Point>
+   </Group>
+   <Group id="88480" name="Mains values" uid="1045639">
+      <Point id="1045622" name="Im3%2FEarthFC" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="295" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045623" name="Mains freq" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="296" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045624" name="Mains PF" unit="">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="300" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045625" name="Mains V" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="291" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045626" name="Mains V L1-L2" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="292" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045627" name="Mains V L1-N" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="288" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045628" name="Mains V L2-L3" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="293" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045629" name="Mains V L2-N" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="289" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045630" name="Mains V L3-L1" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="294" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045631" name="Mains V L3-N" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="290" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045632" name="Mains V unbal" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="302" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045633" name="MaxVectorS" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="311" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045634" name="Object P" unit="">
+         <Type>ShowValue</Type>
+         <Address format="S32" index="305" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045635" name="Object PF" unit="">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="309" type="Holding"/>
+         <Calculate decimals="2" scaling="100.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045636" name="Object Q" unit="">
+         <Type>ShowValue</Type>
+         <Address format="S32" index="307" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045637" name="P mains" unit="">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="298" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045638" name="Q mains" unit="">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="299" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="88481" name="ProcessControl" uid="1050240">
+      <Point id="1050237" name="%23Neutral cont">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3606" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DEACH%3B1%3DCOMMON</Enum>
+      </Point>
+      <Point id="1050235" name="%23SysBaseLoad" unit="kW">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3604" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1050233" name="%23SysLdCtrl PtM">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3602" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DBASE LOAD%3B1%3DLDSHARING</Enum>
+      </Point>
+      <Point id="1050234" name="%23SysPFCtrl PtM">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3603" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DBASEPF%3B1%3DVSHARING</Enum>
+      </Point>
+      <Point id="1050236" name="%23SysPwrFactor">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3605" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1050231" name="LocalBaseload" unit="kW">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3089" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1050230" name="Synchro enable">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3087" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DNONE%3B1%3DFORWARD </Enum>
+      </Point>
+      <Point id="1050232" name="SysBaseLdMode">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3090" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DINTERNAL%3B1%3DEXTERNAL</Enum>
+      </Point>
+      <Point id="1050238" name="SysBasePFMode">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3643" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DINTERNAL%3B1%3DEXTERNAL</Enum>
+      </Point>
+      <Point id="1050239" name="WatchedContr">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3756" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="89056" name="Pwr managment " uid="1053657">
+      <Point id="1053641" name="%23PriorAutoSwap">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="3608" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053655" name="%23Pwr mgmt mode">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3607" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DABS %28kW%29%3B1%3DABS %28kVA%29%3B2%3DREL %28%25%29</Enum>
+      </Point>
+      <Point id="1053656" name="%23SysAMFstrtDel" unit="s">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="3609" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053648" name="Act Reserve" unit="kX">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="350" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053651" name="ActRes rel" unit="%25">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="353" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053637" name="Control group">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="3582" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053647" name="EnginePriority">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="349" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053638" name="GroupLinkLeft">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="3583" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053639" name="GroupLinkRight">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="3584" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053654" name="MinR PWR" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="356" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053634" name="Priority">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="3578" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053635" name="Priority ctrl">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3579" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DSLAVE%3B1%3DMASTER        </Enum>
+      </Point>
+      <Point id="1053633" name="Pwr managment">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3577" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DDISABLED%3B1%3DENABLED</Enum>
+      </Point>
+      <Point id="1053652" name="Res rel" unit="%25">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="354" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053649" name="Reserve" unit="kX">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="351" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053650" name="Reserve Stp" unit="kX">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="352" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053653" name="ResStp rel" unit="%25">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="355" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1053636" name="RunHoursBase" unit="h">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="3580" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="88482" name="Special" uid="1045657">
+      <Point id="1045656" name="Application mode" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="131" type="Holding"/>
+         <Calculate mask="28672"/>
+         <Enum>1%3DSPI mode%3B2%3DSPtM mode%3B4%3DMINT mode</Enum>
+      </Point>
+   </Group>
+   <Group id="88483" name="Statistics" uid="1049608">
+      <Point id="1045657" name="DnTimeReqToRun" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="3750" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045658" name="kVArhours" unit="kVArh">
+         <Type>ShowValue</Type>
+         <Address format="S32" index="3597" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045659" name="kWhours" unit="kWh">
+         <Type>ShowValue</Type>
+         <Address format="S32" index="3595" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045660" name="Num starts" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="3589" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045661" name="NumUnscStarts" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="3590" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1049607" name="PulseCounter">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="3729" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045662" name="Run hours" unit="h">
+         <Type>ShowValue</Type>
+         <Address format="S32" index="3587" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045663" name="Service time 1" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="3591" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045664" name="Service time 2" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="3592" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045665" name="Service time 3" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="3593" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045666" name="Service time 4" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="3594" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045667" name="TotalDownTime" unit="">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="3749" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="88484" name="Sync%2FLoad ctl Setpoints" uid="1050246">
+      <Point id="1045669" name="Angle gain" unit="%25">
+         <Type>SetValue</Type>
+         <Address format="S16" index="3131" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045670" name="Dwell time" unit="s">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3127" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045671" name="Freq gain" unit="%25">
+         <Type>SetValue</Type>
+         <Address format="S16" index="3128" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045672" name="Freq int" unit="%25">
+         <Type>SetValue</Type>
+         <Address format="S16" index="3129" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045673" name="Freq reg loop">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3130" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DGCB OPEN%3B1%3DSYNC ONLY</Enum>
+      </Point>
+      <Point id="1045674" name="GCB open del" unit="s">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3139" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045675" name="GCB open level" unit="%25">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3138" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045676" name="GtoM AngelReq" unit="%C2%B0">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3125" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045677" name="Load gain" unit="%25">
+         <Type>SetValue</Type>
+         <Address format="S16" index="3136" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045678" name="Load int" unit="%25">
+         <Type>SetValue</Type>
+         <Address format="S16" index="3137" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045679" name="Load ramp" unit="s">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3135" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1050244" name="LS gain" unit="%25">
+         <Type>SetValue</Type>
+         <Address format="S16" index="3141" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1050245" name="LS int" unit="%25">
+         <Type>SetValue</Type>
+         <Address format="S16" index="3142" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045680" name="Phase window" unit="%C2%B0">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3126" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045681" name="RampStartLevel" unit="%25">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3144" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045682" name="SpdGovPWM rate" unit="Hz">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3145" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045684" name="Speed gov bias" unit="V">
+         <Type>SetValue</Type>
+         <Address format="S16" index="3132" type="Holding"/>
+         <Calculate decimals="2" scaling="100.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045686" name="SpeedGowHiLim" unit="V">
+         <Type>SetValue</Type>
+         <Address format="S16" index="3134" type="Holding"/>
+         <Calculate decimals="2" scaling="100.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045687" name="SpeedGowLowLim" unit="V">
+         <Type>SetValue</Type>
+         <Address format="S16" index="3133" type="Holding"/>
+         <Calculate decimals="2" scaling="100.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045688" name="SpeedRegChar">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3123" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DPOSITIVE%3B1%3DNEGATIVE</Enum>
+      </Point>
+      <Point id="1045690" name="Sync timeout" unit="s">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3140" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045691" name="SystLoadCtrl" unit="">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="330" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DNone%3B1%3DIsland%3B2%3DBaseLd%3B3%3DBLdExLm%3B4%3DPwrI%2FE%3B5%3DTbyPwr</Enum>
+      </Point>
+      <Point id="1045692" name="TauSpeedActuat" unit="s">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3143" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045693" name="Voltage windows" unit="%25">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3124" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="88809" name="Sync%2FLoad ctl Values" uid="1050244">
+      <Point id="1045668" name="ActPwrReq">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="325" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1050242" name="netPgnomPh" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="S32" index="339" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1050243" name="ReqEngineSpeed" unit="RPM">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="448" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045683" name="SpdRegOut">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="328" type="Holding"/>
+         <Calculate decimals="3" scaling="1000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045685" name="Speed request">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="327" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045689" name="SpeedReq RPM">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="406" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1050241" name="TotRunPact P" unit="kW">
+         <Type>ShowValue</Type>
+         <Address format="S32" index="337" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1050240" name="TotRunPact Q" unit="kVAr">
+         <Type>ShowValue</Type>
+         <Address format="S32" index="335" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="88485" name="Volt%2FPF ctrl Setpoints" uid="1050249">
+      <Point id="1045694" name="AVR DCout bias">
+         <Type>SetValue</Type>
+         <Address format="S16" index="3151" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045695" name="AVRRegChar">
+         <Type>SetEnum</Type>
+         <Address format="U16" index="3146" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DPOSITIVE%3B1%3DNEGATIVE</Enum>
+      </Point>
+      <Point id="1045696" name="PF gain">
+         <Type>SetValue</Type>
+         <Address format="S16" index="3149" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045697" name="PF int">
+         <Type>SetValue</Type>
+         <Address format="S16" index="3150" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1045699" name="TauVoltActuat">
+         <Type>SetValue</Type>
+         <Address format="U16" index="3154" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045700" name="Voltage gain">
+         <Type>SetValue</Type>
+         <Address format="S16" index="3147" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1045701" name="Voltage int">
+         <Type>SetValue</Type>
+         <Address format="S16" index="3148" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1050247" name="VS gain" unit="%25">
+         <Type>SetValue</Type>
+         <Address format="S16" index="3152" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1050248" name="VS int" unit="%25">
+         <Type>SetValue</Type>
+         <Address format="S16" index="3153" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="88810" name="Volt%2FPF ctrl Values" uid="1045703">
+      <Point id="1045698" name="SystPfCtrl">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="331" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DNone%3B1%3DIsland%3B2%3DBasePF%2F3%3DPF I%2FE</Enum>
+      </Point>
+      <Point id="1045702" name="VoltRegOut">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="329" type="Holding"/>
+         <Calculate decimals="1" scaling="10.0"/>
+         <Enum/>
+      </Point>
+   </Group>
+</ControllerTemplate>

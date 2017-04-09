@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<p>Note that the xml file you upload is not directly available in the templates from your DB. <a href="{% url 'templates' %}">Go to templates</a> to auto add them.</p>
+<h2>List of uploaded documents</h2>
+<h3>(Document objects in the DB)</h3>
+    <!-- List of uploaded documents -->
+    {% if documents %}
+        <ul>
+        {% for document in documents %}
+            <li><a href="{{ document.docfile.url }}">{{ document.docfile.name }}</a></li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No documents.</p>
+    {% endif %}
+    
+<h2>Upload a new document</h2>
+
+        <!-- Upload form. Note enctype attribute! -->
+        <form action="{% url 'upload' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <p>{{ form.non_field_errors }}</p>
+            <p>{{ form.docfile.label_tag }} {{ form.docfile.help_text }}</p>
+            <p>
+                {{ form.docfile.errors }}
+                {{ form.docfile }}
+            </p>
+            <p><input type="submit" value="Upload" /></p>
+        </form>
+{% endblock %}

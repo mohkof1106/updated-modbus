@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<h3>Done</h3>
+
+<ul>
+{% for el in string_list %}
+    <li><PRE>{{ el }}</PRE></li>
+{% endfor %}
+</ul>
+
+{% if go_back %}
+	<a href="{% url go_back %}">Go back</a>
+{% endif %}
+
+
+{% endblock %}

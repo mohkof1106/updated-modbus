@@ -1,0 +1,438 @@
+{% extends "base.html" %}
+{% load staticfiles %}
+
+{% block content %}
+
+<h1>
+Instructions to set up a new controller
+</h1>
+We assume you have the website run by user enerwhere@enerwhere.com
+you have the user pi1@enerwhere set up, replace pi1 by whatever
+
+<h2>I/Set up the OS</h2>
+instructions are for raspberry pi
+<ul>
+<li>
+use latest version of raspbian,
+<a href=https://www.raspberrypi.org/documentation/installation/installing-images/linux.md>follow steps from the raspberry pi website</a>
+</li>
+<li>
+boot raspberry
+</li>
+<li>
+find your ip
+</li>
+<li>
+make sure ssh is enabled (by default)
+</li>
+<li>
+verify your disk usage with <i>df -h</i>
+</li>
+<li>
+execute <i>sudo raspi-config</i> to expand SD card usage
+</li>
+<li>
+update/upgrade (you can use advanced options of <i>raspi-config</i> to update)
+</li>
+<li>
+verify/download:
+<ul>
+</li>
+<li>
+	-git
+</li>
+<li>
+	-pip
+</li>
+<li>
+	-nmap can be useful
+</li>
+<li>
+<b>quick way:</b> <i>sudo apt-get install git python-pip nmap</i>
+</li>
+</ul>
+<li>
+You may change the default user, but the name will be important for the rest of the steps
+
+</li>
+<li>
+<p>configure your gateway, internet connection, etc.
+</p>
+For static IP do not use /etc/network/interfaces but /etc/dhcpcd.conf
+<ul>
+</li>
+<li>
+	-If you need an example you may look into the project repo at path modbus_controller/setup/local
+</li>
+<li>
+	-You can simply add the following lines for a static IP configuration, with changes according to your network
+</li>
+</ul>
+For static IP add the following lines to /etc/dhcpcd.conf
+<p>
+<ul>
+<li>
+interface eth0
+</li>
+<li>
+static routers=192.168.0.254
+</li>
+<li>
+static domain_name_servers=192.168.0.254
+</li>
+<li>
+static ip_address=192.168.0.19
+</li>
+<li>
+static domain_search=
+</li>
+</ul>
+</p>
+</li>
+
+
+<li>
+Optional:
+give yourself a git name, necessary to commit changes
+<ul>
+<li>
+<i>git config --global user.name "Pi1"</i>
+</li>
+<li>
+<i>git config --global user.mail "controller@enerwhere.com"</i>
+</li>
+</ul>
+</li>
+</ul>
+
+<h2>
+II/Set up controller
+</h2>
+<ul>
+<li>
+verify/install requirements (django 1.8, modbus_tk, paramiko, dateutil, pytz, etc.. see file requirements.txt). Here are some hints to help you if you have a problem:
+<ul>
+<li>
+	- for example <i>sudo pip install Django==1.8</i>
+</li>
+<li>
+	-verify if there is no issue with paramiko: <i>python</i> > <i>import paramiko</i>
+</li>
+<li>
+		-I had an import error with Crypto, solved by <i>apt-get install python-paramiko</i> instead of <i>pip</i>
+</li>
+<li>
+	<b>quick way:</b> With this line you won't have any of the problems mentioned above <i>sudo pip install Django==1.8 modbus_tk pytz && sudo apt-get install python-paramiko python-dateutil</i>
+</li>
+</ul>
+</li>
+<li>
+take note of your MAC address (<i>ifconfig</i>: HWaddr), you can start filling in a new LinkUserToPlant object in the online database
+<ul>
+	<b>quick way:</b> <i>sudo ifconfig | grep eth0 | tr -s ' ' | awk -F'[ ]' '{if (/HWaddr/) print $5}'</i>
+</ul>
+</li>
+<li>
+On the website, fill the <a href=http://controller.enerwhere.com/admincontroller_setup/linkusertoplant/add/>LinkUserToPlant creation form<a> with:
+<ul>
+<li>
+	-you will need the user name pi1 from webfaction
+</li>
+<li>
+	-change the default 12345 port for the tunnel, look for a port that is not used yet by the <a href=http://controller.enerwhere.com/admincontroller_setup/linkusertoplant/>other LinkUserToPlants<a>
+</li>
+<li>
+	-fill in the local user name "pi" that you may have changed earlier
+</li>
+<li>
+	-distant project path is where the project folder is, to be exact where manage.py will be
+</li>
+<li>
+	-fill the controller MAC address to later have the option --plant=auto available for control
+</li>
+<li>
+	-the host option is for when enerwhere ssh into pi1@server, see server setup section
+</li>
+</ul>
+</li>
+<li>
+make sure the start/stop jobs exist in chronographDB, see V/ for more explanations about the chronograph app.
+</li>
+<li>
+commit the changes to repo (see webfactions where project is hosted, it's enerwhere/webapps/modbus_controller/modbus_controller/(.git))
+</li>
+<li>
+git clone the repo in for example the home folder, make sure this corresponds to the path from LinkUser
+<ul>
+	<b>quick way:</b> <i>cd && git clone https://bitbucket.org/enerwherecoders/modbus_controller.git</i>
+</ul>
+</li>
+<h3>
+II-b/crontab
+</h3>
+<ul>
+<li>
+verify crontab with <i>crontab -l</i> (should be empty)
+</li>
+<li>
+in one go:
+<ul>
+<li>
+	- <b>quick way:</b> <i>crontab -l && crontab ~/modbus_controller/setup/local/crontab.txt && crontab -l</i>. Sets all future crontab as well.
+</li>
+</ul>
+</li>
+<li>
+or:
+<ul>
+<li>
+	-add cronjob for reboot (to reset the tunnel, just a precaution):
+<ul>
+		0 0 * * * sudo reboot
+</ul>
+</li>
+<li>
+	-add cronjob for manage.py run_jobs (TODO: detail of crontab):
+<ul>
+		* * * * * cd ~/modbus_controller/ && python manage.py cron
+</ul>
+</li>
+</ul>
+</li>
+<li>
+see crontab file setup/local/crontab.txt from the project folder you just cloned for an explicit example
+</li>
+<li>
+test in console <i>python manage.py read_value</i> to verify you have the right dependencies
+</li>
+</ul>
+</ul>
+
+<h2>
+III/Set up the tunnel
+</h2>
+<ul>
+<li>
+prepare ssh for no passwd from controller to server by
+<ul>
+<li>
+	- either follow the <a href=http://www.thegeekstuff.com/2008/11/3-steps-to-perform-ssh-login-without-password-using-ssh-keygen-ssh-copy-id/>explicit instructions</a>
+</li>
+<li>
+	- or as a summary:
+<ul>
+<li>
+		- generate your key identifying your user: <i>ssh-keygen</i> then 3 times [Enter]
+</li>
+<li>
+		- send the key and perform requiered tasks: <i>ssh-copy-id -i ~/.ssh/id_rsa.pub pi1@enerwhere.com</i>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+configure ssh with the folder modbus_controller/setup/local
+<ul>
+<li>
+	-(not necessary if you got the code from the repo) if needed you can verify the permissions with <i>ls -loath</i>, results:
+<ul>
+<p>
+-rwx------ 1 pi pi  463 Jan 21 10:15 create_ssh_tunnel.sh
+</p>
+<p>
+-rw-r--r-- 1 pi pi 1334 Jan 21 11:35 crontab.txt
+</p>
+<p>
+-rwxr--r-- 1 pi pi 1849 Jan 21 11:21 ssh_config
+</p>
+<p>
+-rwxr--r-- 1 pi pi 2696 Jan 21 11:21 sshd_config
+</p>
+</ul>
+</li>
+<li>
+	-use the file ssh_config as /etc/ssh/ssh_config or ~/.ssh/config
+<ul>
+<li>
+		-make sure to keep the permissions
+
+<ul>
+			- default for ssh_config is mode 0644 (rw-r--r--), but you may keep the x
+</ul>
+</li>
+<li>
+		-more info about this file on <a href=http://manpages.ubuntu.com/manpages/hardy/man5/ssh_config.5.html>ssh_config man page<a>
+</li>
+<li>
+		-you can also put the last two options from our file in ~/.ssh/config, these are the important lines
+</li>
+<li>
+		-<b>quick way:</b> <i>sudo cp ~/modbus_controller/setup/local/ssh_config /etc/ssh/ssh_config</i>
+</li>
+</ul>
+</li>
+<li>
+	-use the sshd_config as /etc/ssh/sshd_config
+<ul>
+<li>
+		-important to free the port when a client dies but connection stays open
+</li>
+<li>
+		-more on <a href=http://manpages.ubuntu.com/manpages/hardy/man5/sshd_config.5.html>sshd_config man page<a>
+</li>
+<li>
+		-<b>quick way:</b> <i>sudo cp ~/modbus_controller/setup/local/sshd_config /etc/ssh/sshd_config</i>
+</li>
+</ul>
+</li>
+<li>
+	-copy the create_ssh_tunnel.sh file to your home foder (or somewhere else but you should adapt the path in the cronjob)
+<ul>
+<li>
+		-<b>quick way:</b> <i>cp ~/modbus_controller/setup/local/create_ssh_tunnel.sh ~/</i>
+</li>
+</ul>
+</li>
+<li>
+	-edit this last file to match your LinkUser:
+<ul>
+<li>
+		<i>/usr/bin/ssh -N -R 12345:localhost:22 pi1@enerwhere.com</i>
+</li>
+<li>
+		12345 is the port to reverse tunnel, pi1 the user on webfactions
+</li>
+<li>
+		verify with <i>ssh -N -R 12345:localhost:22 pi1@enerwhere.com</i>
+</li>
+<li>
+		you can use a port on webfactions only once
+</li>
+<li>
+		-<b>quick way:</b> <i>nano ~/create_ssh_tunnel.sh</i>
+</li>
+</ul>
+</ul>
+</li>
+<li>
+add cronjob to create tunnel (already done if you used the crontab.txt file previously)
+<ul>
+	*/1 * * * * ~/create_ssh_tunnel.sh > tunnel.log 2>&1
+</ul>
+</li>
+</ul>
+<h2>
+IV/Set up server
+</h2>
+<ul>
+<li>
+prepare ssh for no passwd from server to controller, see III
+<ul>
+<li>
+	Note that for the port you will this time need <i>ssh-copy-id -i ~/.ssh/id_rsa.pub "pi@localhost -p 12345"</i>
+</li>
+<li>
+ <b>quick way:</b> 
+ <ul>
+ <li>
+ <i>ssh pi1@enerwhere.com</i>
+ </li>
+  <li>
+ <i>ssh-keygen</i> then 3 times [Enter]
+ </li>
+  <li>
+ <i>ssh-copy-id -i ~/.ssh/id_rsa.pub "pi@localhost -p 12345"</i>
+ </li>
+  <li>
+ <i>exit</i> to go back to the controller
+ </li>
+ </ul>
+</li>
+</ul>
+</li>
+<li>
+configure the user on webfaction for the tunnel:
+<ul>
+<li>
+	- <b>quick way:</b> execute from the local controller <i>scp ~/modbus_controller/setup/server/config pi1@enerwhere.com:~/.ssh/config</i>. Very important to keep a reliable tunnel.
+</li>
+</ul>
+</li>
+<li>
+do ssh no passwd again but from enerwhere user to pi1@host. This will let the website send commands to the pi1 user.
+<ul>
+<li>
+	- look out pi1@enerwhere.com and pi1@localhost are different hosts in the eyes of .ssh/known_host, use the one consistent with the LinkUser you created before. You may priviledge 'localhost'
+</li>
+<li>
+	- instructions are the same as for III
+</li>
+<li>
+ <b>quick way:</b> 
+ <ul>
+ <li>
+ <i>ssh enerwhere@enerwhere.com</i>
+ </li>
+  <li>
+ (<i>ssh-keygen</i> then 3 times [Enter]) <-- already exists
+ </li>
+  <li>
+ <i>ssh-copy-id -i ~/.ssh/id_rsa.pub "pi1@localhost"</i>
+ </li>
+  <li>
+ <i>exit</i> to go back to the controller
+ </li>
+ </ul>
+</li>
+</ul>
+</li>
+</ul>
+
+And you are done! You can verify the result by asking the controller status on the <a href="{% url 'control' %}">control page</a>.
+
+<h2>V/Additional explanation</h2>
+<h3>V-a/Updating the code</h3>
+Depending on your commits running <i>git pull origin master</i> from the controller's project directory might do the trick. If you encounter some problems follows the instructions beneath.
+<p>To update the code you will need to run several commands:</p>
+<ul>
+
+<li>
+First stop the controller since it might keep writting in the database with <i>sh ~/modbus_controller/stop.sh</i>.
+</li>
+<li>
+The configuration.sqlite3 might now be forking, if you want to keep your logs you should copy them under a different name (use <i>cp</i>).
+</li>
+<li>
+Restore the code to the HEAD of the git log with <i>git stash</i>, note that with this your changes will be lost.
+</li>
+<li>
+You can now pull the code with <i>git pull origin master</i>. You might need to merge with your local changes.
+</li>
+<li>
+Eventually start the controller again.
+</li>
+</ul>
+
+<h3>V-b/Chronograph app</h3>
+<ul>
+<li>Job details</li>
+<ul>
+
+</ul>
+<li>Frequency options</li>
+</ul>
+
+<h3>V-c/manage.py commands</h3>
+<p>Running <i>python manage.py</i> from the project directory will reveal the different commands available per app.</p>
+<p>For specific usage instructions use for example <i>python manage.py control --help</i> and for some example you can find in your project directory the files start.sh, stop.sh, etc.</p>
+
+<h3>V-d/Database relationship</h3>
+<p>You can start building a new plant by creating one LinkUserToPlant object and several Measure objects, consequently you will have to follow the popup windows to create the devices, clients, etc.
+</p>
+
+<p>One comfortable way is start from the bottow: create the tables then the templates, generate the address mappings with the <i>manage.py templates</i> command or with the <a href="{% url 'templates' %}">templates page</a>. When done create the plant, then the clients, devices and finally measures.</p>
+<p>For information on the hierarchy of the database see the picture bellow:</p>
+<img src="{% static "relationships.real.large.png" %}" />
+
+{% endblock %}

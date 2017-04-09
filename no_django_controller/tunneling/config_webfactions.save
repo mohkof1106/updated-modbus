@@ -1,0 +1,5 @@
+# put in ~/.shh/config
+# Added after
+# http://serverfault.com/questions/595323/ssh-remote-port-forwarding-failed#595335
+   ServerAliveInterval 60
+   ExitOnForwardFailure yes

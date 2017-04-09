@@ -1,0 +1,239 @@
+/* Base */
+@import url(http://static.typepad.com/.shared:v59ac184:typepad:en_us/themes/walt/styleless/theme.css);
+
+@import url(http://static.typepad.com/.shared:v59ac184:typepad:en_us/themes/common/bxslider.css);
+@import url(http://static.typepad.com/.shared:v59ac184:typepad:en_us/css/widgets.css);
+@import url(http://static.typepad.com/.shared:v59ac184:typepad:en_us/themes/common/recentpostsfancy.css);
+
+/* Tip Jar */
+@import url(http://static.typepad.com/.shared:v59ac184:typepad:en_us/themes/common/tipjar.css);
+
+/* Portal */
+
+/* Theme */
+@import url(http://static.typepad.com/.shared:v59ac184:typepad:en_us/themes/typepad/theme-clean/clean.css);
+
+
+
+/* Theme - Custom Banner */
+
+
+
+
+
+/* Custom CSS */
+@import url(http://fonts.googleapis.com/css?family=Signika:700);
+
+/* !!! Leave this in so it doesn't display the modules from the demo pages */
+.module-custom_html {display:none;}
+
+/* Entry header padding */
+h3.entry-header {
+margin-top: 10px;
+margin-bottom: 15px;
+}
+
+.content-nav { font-size: 85%;}
+
+/* Text only banner */
+#banner { height: auto; }
+#banner-inner { 
+position: relative; 
+top: 0;
+background: #fff;
+padding: 15px 0px;
+border: 0;
+}
+
+.entry-body img,.entry-more img {
+width: 746px;
+border: 2px solid #EDEDED; 
+-moz-border-radius:0px;
+-webkit-border-radius:0px;
+margin-bottom: 15px;
+}
+
+.entry-body img.normal{
+width: auto;
+}
+
+.entry-body img.fullwidth{
+width: 730px;
+border: 1px solid #333; 
+}
+
+
+
+/* TEXTAREAS */
+.entry textarea {
+border: 1px solid #cccccc;
+background: #F0F8FF;
+margin-left: 20px;
+font-family:'Lato', Helvetica, Arial, sans-serif;
+font-size:90%;
+margin-bottom: 5px;
+padding: 5px;
+resize: both; 
+line-height: 130%;
+
+height: 80px; width: 300px;
+min-height: 80px; min-width:300px;
+max-height: 170px; max-width:715px;
+}
+
+.entry textarea.wide { 
+height: 110px; width: 715px; 
+min-height: 100px; min-width:715px;
+max-height: 1200px; max-width:715px;
+}
+
+
+.entry textarea.small { 
+height: 140px; width: 260px; 
+min-height: 140px; min-width:260px;
+max-height: 400px; max-width:715px;
+}
+
+.entry textarea.medium { 
+height: 200px; width: 330px; 
+min-height: 200px; min-width:330px;
+max-height: 500px; max-width:715px;
+}
+
+.entry textarea.tall { 
+height: 260px; width: 400px; 
+min-height: 260px; min-width:400px;
+max-height: 600px; max-width:715px;
+}
+
+.entry textarea.sub { background: #eee; }
+
+/* retire BIG */
+.entry textarea.big { width: 710px; height: 100px; background: #ffffff;}
+
+pre { margin-left: 20px; }
+
+
+
+.see-also {
+background: #F5F5F5;
+margin-top: 30px;
+padding: 5px 10px;
+}
+
+
+
+
+
+/* Recent Posts Highlighting */
+.module-archives ul li {
+	padding: 8px 15px;
+	margin: 5px 0;
+}
+ 
+.module-archives a, .module-archives a:hover {color: #444;}
+.module ul li:nth-child(odd) { background: rgba(50,50,50,0.1); }
+.module ul li:nth-child(odd):hover { background: rgba(50,50,50,0.4); }
+.module ul li:nth-child(even) { background: rgba(50,50,50,0.2); }
+.module ul li:nth-child(even):hover { background: rgba(50,50,50,0.4); }
+
+
+
+
+/* 100% width nav */
+#container { width: 100%; }
+
+#banner-inner, #pagebody-inner, #nav-inner, #footer-inner { 
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+body, #banner, #footer, #footer a, #footer a:hover { background: #fff; }
+
+#banner { height: auto;}
+#banner-inner { 
+	position: relative; 
+	top: 0;
+	padding: 10px 0px;
+	background: transparent;
+	border: 0;
+}
+	
+/* Nav Bar Color */ 
+#nav, #nav-inner, .nav-list, .nav-list-item a {
+	background-color: #fff;
+	color: #333;
+	}
+
+.nav-list-item a:hover {
+	background-color: #fff;
+	color: #888;
+	}
+
+
+/* Nav Bar Color */ 
+#nav, #footer {
+	border-top: 4px double #ddd;
+	border-bottom: 4px double #ddd;
+	}
+
+
+#banner-header, #banner-description {
+	margin-left: 10px;
+	}
+
+
+#nav ul {
+padding-left: 0;
+}
+
+#nav a:link,a:visited {
+padding:4px 10px;
+}
+
+
+hr {
+    padding: 0;
+    border: none;
+    border-top: medium double #ccc;
+    color: #ccc;
+    text-align: center;
+    margin: 30px auto;
+height: 0;
+}
+hr:after {
+    content: "âˆ—";
+top: -0.7em; font-size: 1.5em; padding: 0 0.25em;
+    display: inline-block;
+    position: relative; 
+    background: white;
+}
+
+
+
+/* Banner Font */
+#banner-header {
+font-family: 'Signika', sans-serif;
+font-weight: 700;
+font-size: 175%;
+}
+
+dt {
+font-weight: bold;
+margin: 5px 0px 0px;
+line-height: 100%;
+}
+
+dd {
+margin: 0px 15px;
+}
+
+
+
+
+
+
+
+/* ph=1 */
+

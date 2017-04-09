@@ -1,0 +1,945 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<ControllerTemplate encoding="UTF-8" name="AE 3TL Inverter" uid="98211" version="1.0">
+   <Group id="97778" name="3TL Inverter Control" uid="1165210">
+      <Point id="1161513" name="01 - Sunspec model ID %2864107%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40209" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161514" name="02 -Length of model %2860 %3F%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40210" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161515" name="03 - Temperature Cooler Right" unit="C">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="40211" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1161516" name="04 - Temperature Cooler Left" unit="C">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="40212" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1161517" name="05 - Temperature interior lower right" unit="C">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="40213" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1161518" name="06 - Temperature interior upper left" unit="C">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="40214" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1161519" name="07 - Temperatur scale factor %28-1%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40215" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161520" name="08 - Iso Measurement Measured Resistance %28Negative" unit="NZK">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="40216" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161521" name="09 - Iso Measurement Mesured Resistance %28Positive%29" unit="PZK">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40218" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161522" name="10 - Iso Measurement scale factor %281%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40220" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161523" name="11 - Reactive Power SetPoint">
+         <Type>ShowValue</Type>
+         <Address format="Float" index="40221" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161524" name="12 - Max Reactive Power">
+         <Type>ShowValue</Type>
+         <Address format="Float" index="40223" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161525" name="13 - Desired Reactive Power" unit="kVA">
+         <Type>SetValue</Type>
+         <Address format="S32" index="40225" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161526" name="14 - Reactive power Scale Factor" unit="SF">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40227" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161527" name="15 - Desired Reactive Power Cos Phi" unit="Cos Phi">
+         <Type>SetValue</Type>
+         <Address format="S16" index="40228" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161528" name="16 -Desired Reactive Power scale factor %28-2%29" unit="SF">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40229" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161530" name="17 - MPPT Active Power output" unit="kW or W">
+         <Type>ShowValue</Type>
+         <Address format="Float" index="40230" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161531" name="18 - Remote Max Power" unit="%25">
+         <Type>SetValue</Type>
+         <Address format="U16" index="40232" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1161533" name="19 - Remote Max Power scale factor %28-1%29" unit="SF">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40233" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161534" name="20 - Daily sun irradiation energy" unit="kWh%2Fm%C2%B2">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="40234" type="Holding"/>
+         <Calculate scaling="10000.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1161535" name="21 - Irradiation scale factor %28-4%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40236" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161536" name="22 - Remaining Time to connect" unit="S">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40237" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161537" name="23 - Transition Status for DC">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="40238" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DOK%3B1%3DOK Waiting%3B2%3DUnder Voltage%3B3%3DOver Voltage</Enum>
+      </Point>
+      <Point id="1161538" name="24 - Transition Status for AC">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="40239" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DOK%3B1%3DOK Waiting%3B2%3DUnder Voltage%3B3%3DOver Voltage%3B4%3DUnder Frequency%3B5%3DOver Frequency%3B6%3DLow Power</Enum>
+      </Point>
+      <Point id="1161539" name="25 - User Clearance">
+         <Type>ShowEnum</Type>
+         <Address format="U32" index="40240" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3Dinverter stays in check state%3B1%3Dnormal activation</Enum>
+      </Point>
+      <Point id="1161540" name="26 - Portal Request Command">
+         <Type>SetEnum</Type>
+         <Address format="U32" index="40242" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3DNo%3B1%3DSend portal update</Enum>
+      </Point>
+      <Point id="1161541" name="27 - Clear Blocking Errors">
+         <Type>SetEnumWO</Type>
+         <Address format="U32" index="40244" type="Holding"/>
+         <Calculate/>
+         <Enum>424242%3DClear</Enum>
+      </Point>
+      <Point id="1165197" name="28 - The latest error id code">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="40246" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165198" name="29 - Array warnings">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="40248" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165199" name="30 - Grid warnings">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="40250" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165200" name="31 - System warnings">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40252" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165201" name="32 - Drive warnings">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40266" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165202" name="33 - Temperature warnings">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40268" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165203" name="34 - System faults">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40270" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165204" name="35 - Non Restartable Faults">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40272" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165205" name="36 - Operation Time in s" unit="S">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40274" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165206" name="37 - Value of External Sensor 1">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40276" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165207" name="38 - Value of External Sensor 1">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40277" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161542" name="39 - Daily Energy" unit="Wh *100">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="40278" type="Input"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161543" name="40 - Daily Energy Scale Factor">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40280" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165208" name="41 - Start Update">
+         <Type>SetEnumWO</Type>
+         <Address format="U16" index="40281" type="Holding"/>
+         <Calculate/>
+         <Enum>1%3Dstart</Enum>
+      </Point>
+      <Point id="1165209" name="42 - Update Progress">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40282" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="97750" name="Basic Inverter Model" uid="1161513">
+      <Point id="1161160" name="01 - Inverter model ID">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40070" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161161" name="02 - Length of inverter model">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40072" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161162" name="03 - Total Current" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40073" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1161163" name="04 - Current L1" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40074" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1161164" name="05 - Current L2" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40075" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1161165" name="06 - Current L3" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40076" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1161166" name="07 - Current Scale Factor">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="40077" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161167" name="08 - Line Voltage L1-L2" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40078" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1161168" name="09 - Line Voltage L2-L3" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40079" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1161169" name="10 - Line Voltage L3-L1" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40080" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1161170" name="11 - Phase Voltage L1-N" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40081" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1161171" name="12 - Phase Voltage L2-N" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40082" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1161172" name="13 - Phase Voltage L3-N" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40083" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1161173" name="14 - Voltage Scale Factor">
+         <Type>ShowValue</Type>
+         <Address format="Swap float" index="40084" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161174" name="15 - Active Power" unit="W">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40085" type="Holding"/>
+         <Calculate scaling="0.1"/>
+         <Enum/>
+      </Point>
+      <Point id="1161175" name="16 - Watts scale factor">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40086" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161176" name="17 - Frequency" unit="Hz">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40087" type="Holding"/>
+         <Calculate decimals="0" scaling="100.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1161177" name="18 - Frequency Scale Factor">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40088" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161178" name="19 - Apparent Power" unit="VA">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40089" type="Holding"/>
+         <Calculate scaling="0.1"/>
+         <Enum/>
+      </Point>
+      <Point id="1161179" name="20 - VA Scale factor">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40090" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161180" name="21 - Reactive Power" unit="VAr">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40091" type="Holding"/>
+         <Calculate scaling="0.1"/>
+         <Enum/>
+      </Point>
+      <Point id="1161181" name="22 - VAr Scale factor">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40092" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161182" name="23 - Power Factor" unit="PF">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40093" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161183" name="24 - PF Scale Factor">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="40094" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161184" name="25 - Energy" unit="Wh">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="40095" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161185" name="25.5 - Energy" unit="Wh">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="40096" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161186" name="26 - Watt-Hours scale factor">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40097" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161187" name="27 - DC Current" unit="A">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40098" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1161188" name="28 - DC Current Scale Factor">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40099" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161189" name="29 - DC Voltage" unit="V">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40100" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1161190" name="30 - DC Volts scale factor">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40101" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161191" name="31 - DC Power" unit="W">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40102" type="Holding"/>
+         <Calculate scaling="0.1"/>
+         <Enum/>
+      </Point>
+      <Point id="1161192" name="32 - DC Watts scale factor">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="40103" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161193" name="33 - Cabinet temperature" unit="C">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="40104" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1161194" name="34 - Heat Sink temperature" unit="C">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="40105" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1161195" name="35 - Transformer temperature" unit="C">
+         <Type>ShowValue</Type>
+         <Address format="S16" index="40106" type="Holding"/>
+         <Calculate scaling="10.0"/>
+         <Enum/>
+      </Point>
+      <Point id="1161511" name="38 - Operating State">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40109" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161512" name="39 - Vendor operating state">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40110" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="97743" name="Common Model" uid="1161160">
+      <Point id="1160978" name="01 - SunSpec_ID">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="40001" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1160979" name="02 - SunSpec_ID%281%29">
+         <Type>ShowValue</Type>
+         <Address format="U32" index="40002" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1160980" name="03 - ID">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40003" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1160981" name="04 - L">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40004" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1160982" name="05 - Manufacturer Name">
+         <Type>ShowValue</Type>
+         <Address format="String" index="40005" multiple="15" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161156" name="06 - Manf Model">
+         <Type>ShowValue</Type>
+         <Address format="String" index="40021" multiple="5" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161157" name="07 - Manf Options">
+         <Type>ShowValue</Type>
+         <Address format="String" index="40037" multiple="7" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161158" name="08 - Manf Version">
+         <Type>ShowValue</Type>
+         <Address format="String" index="40045" multiple="7" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1161159" name="09 - Manf Serial No.">
+         <Type>ShowValue</Type>
+         <Address format="String" index="40053" multiple="15" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="98210" name="Extended Measurements" uid="1165957">
+      <Point id="1165176" name="01 - SunSpec IC measurements model id %28122%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40143" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165956" name="01.1 - SunSpec IC measurements model id %28122%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40144" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165177" name="02 - Length of model %2844%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40145" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165178" name="03 - PV inverter present%2Favailable status.">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40173" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165179" name="04 - Storage inverter present%2Favailable status">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40174" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165180" name="05 - ECP connection">
+         <Type>ShowEnum</Type>
+         <Address format="U16" index="40175" type="Holding"/>
+         <Calculate/>
+         <Enum>0%3Ddisconnected%3B1%3Dconnected</Enum>
+      </Point>
+      <Point id="1165189" name="12 -  VARs available w%2Fout impacting watts">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40200" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165190" name="13 - Scale factor for available VARs.">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40201" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165191" name="14 - Amount of Watts available">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40202" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165192" name="15 - Scale factor for available Watts">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40203" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165193" name="18 - Source of time synchronization.">
+         <Type>ShowValue</Type>
+         <Address format="String" index="40208" multiple="3" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165194" name="20 - Ride-through status">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40214" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165195" name="21 - Isolation resistance">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40215" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165196" name="22 - Scale factor for isolation resistance">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40216" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="98208" name="Immediate Control " uid="1165148">
+      <Point id="1165116" name="01 - SunSpec IC nameplate model id %28123%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40201" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165118" name="02 - Length of model %2824%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40202" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165117" name="03 - Time window for connect%2Fdisconnect.">
+         <Type>SetValue</Type>
+         <Address format="U16" index="40203" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165120" name="04 - Timeout period for connect%2Fdisconnect.">
+         <Type>SetValue</Type>
+         <Address format="U16" index="40204" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165121" name="05 - Enumerated valued.  Connection control.">
+         <Type>SetValue</Type>
+         <Address format="U16" index="40205" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165122" name="06 - Set power output to specified level.">
+         <Type>SetValue</Type>
+         <Address format="U16" index="40206" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165123" name="07 - Time window for power limit change.">
+         <Type>SetValue</Type>
+         <Address format="U16" index="40207" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165124" name="08 - Timeout period for power limit.">
+         <Type>SetValue</Type>
+         <Address format="U16" index="40208" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165125" name="09 - Ramp time for moving from current setpoint to">
+         <Type>SetValue</Type>
+         <Address format="U16" index="40209" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165126" name="10 - Enumerated valued.  Throttle enable%2Fdisable c">
+         <Type>SetValue</Type>
+         <Address format="U16" index="40210" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165127" name="10 - Enumerated valued.  Throttle enable%2Fdisable c">
+         <Type>SetValue</Type>
+         <Address format="U16" index="40210" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165128" name="11 - Set power factor to specific value - cosine o">
+         <Type>SetValue</Type>
+         <Address format="U16" index="40211" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165129" name="12 - Time window for power factor change.">
+         <Type>SetValue</Type>
+         <Address format="U16" index="40212" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165130" name="13 - Timeout period for power factor.">
+         <Type>SetValue</Type>
+         <Address format="U16" index="40213" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165132" name="14 - Ramp time for moving from current setpoint to">
+         <Type>SetValue</Type>
+         <Address format="U16" index="40214" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165133" name="15 - Enumerated valued.  Fixed power factor enable">
+         <Type>SetValue</Type>
+         <Address format="U16" index="40215" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165134" name="16 - Reactive power in percent of WMax.">
+         <Type>SetValue</Type>
+         <Address format="U16" index="40216" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165135" name="17 - Reactive power in percent of VArMax.">
+         <Type>SetValue</Type>
+         <Address format="U16" index="40217" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165136" name="18 - Reactive power in percent of VArAval.">
+         <Type>SetValue</Type>
+         <Address format="U16" index="40218" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165137" name="19 - Time window for VAR limit change.">
+         <Type>SetValue</Type>
+         <Address format="U16" index="40219" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165138" name="19 - Time window for VAR limit change.">
+         <Type>SetValue</Type>
+         <Address format="U16" index="40219" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165139" name="20 - Timeout period for VAR limit.">
+         <Type>SetValue</Type>
+         <Address format="U16" index="40220" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165140" name="21 - Ramp time to move between setpoints">
+         <Type>SetValue</Type>
+         <Address format="U16" index="40221" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165142" name="22 - Enumerated value. VAR percent limit mode.">
+         <Type>SetValue</Type>
+         <Address format="U16" index="40222" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165143" name="23 - Enumerated valued.  Percent limit VAr enable%2F">
+         <Type>SetValue</Type>
+         <Address format="U16" index="40223" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165144" name="24 - Scale factor for power output percent.">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40224" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165146" name="25 - Scale factor for power factor.">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40225" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165145" name="25 - Scale factor for power factor.">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40225" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165147" name="26 - Scale factor for reactive power percent.">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40226" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+   <Group id="98209" name="Nameplate Ratings" uid="1165176">
+      <Point id="1165148" name="01 - SunSpec IC nameplate model id %28120%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40121" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165149" name="02 - Length of model %2826%29">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40122" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165150" name="03 - Type of DER device" unit="Default value is 4">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40123" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165151" name="04 - Continuous power output capability of the inv">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40124" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165152" name="04 - Continuous power output capability of the inv">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40124" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165153" name="05 - Scale factor">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40125" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165155" name="06 - Continuous Volt-Ampere capability of the inve">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40126" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165154" name="06 - Continuous Volt-Ampere capability of the inve">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40126" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165156" name="07 - Scale factor">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40127" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165158" name="08 - Continuous VAR capability - quadrant 1">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40128" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165160" name="09 - Continuous VAR capability -  quadrant 2">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40129" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165163" name="10 - Continuous VAR capability - quadrant 3">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40130" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165164" name="11 - Continuous VAR capability - quadrant 4">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40131" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165165" name="12 - Scale factor">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40132" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165166" name="13 - Maximum RMS AC current level">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40133" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165167" name="14 - Scale factor">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40134" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165168" name="15 - Minimum power factor - quadrant 1">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40135" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165169" name="16 - Minimum power factor - quadrant 2">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40136" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165170" name="17 - Minimum power factor - quadrant 3">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40137" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165171" name="17 - Minimum power factor - quadrant 3">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40137" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165172" name="18 - Minimum power factor - quadrant 4">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40138" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165173" name="19 - Scale factor">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40139" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+      <Point id="1165175" name="20 - Nominal energy rating of storage device">
+         <Type>ShowValue</Type>
+         <Address format="U16" index="40140" type="Holding"/>
+         <Calculate/>
+         <Enum/>
+      </Point>
+   </Group>
+</ControllerTemplate>
